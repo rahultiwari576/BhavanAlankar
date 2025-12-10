@@ -100,50 +100,49 @@ const Navbar = () => {
                 Products
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
               </button>
-              
-              <div className={`absolute top-full left-0 mt-1 w-80 bg-popover border border-border rounded-md shadow-lg z-50 p-2 transition-all duration-200 ${
-                isProductsHovered 
-                  ? "opacity-100 visible translate-y-0" 
-                  : "opacity-0 invisible -translate-y-2 pointer-events-none"
-              }`}>
-                <div className="space-y-1">
-                    {/* Interior */}
-                    <div className="relative group/sub">
-                      <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
-                        Interior
-                        <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
-                      </div>
-                      <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
-                        {productCategories.interior.map((item, idx) => (
-                          <Link
-                            key={idx}
-                            to={`/products?category=interior&filter=${encodeURIComponent(item)}`}
-                            className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
-                          >
-                            {item}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
 
-                    {/* Exterior */}
-                    <div className="relative group/sub">
-                      <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
-                        Exterior
-                        <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
-                      </div>
-                      <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
-                        {productCategories.exterior.map((item, idx) => (
-                          <Link
-                            key={idx}
-                            to={`/products?category=exterior&filter=${encodeURIComponent(item)}`}
-                            className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
-                          >
-                            {item}
-                          </Link>
-                        ))}
-                      </div>
+              <div className={`absolute top-full left-0 mt-1 w-80 bg-popover border border-border rounded-md shadow-lg z-50 p-2 transition-all duration-200 ${isProductsHovered
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-2 pointer-events-none"
+                }`}>
+                <div className="space-y-1">
+                  {/* Interior */}
+                  <div className="relative group/sub">
+                    <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
+                      Interior
+                      <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
                     </div>
+                    <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
+                      {productCategories.interior.map((item, idx) => (
+                        <Link
+                          key={idx}
+                          to={`/products?category=interior&filter=${encodeURIComponent(item)}`}
+                          className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
+                        >
+                          {item}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Exterior */}
+                  <div className="relative group/sub">
+                    <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
+                      Exterior
+                      <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
+                    </div>
+                    <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
+                      {productCategories.exterior.map((item, idx) => (
+                        <Link
+                          key={idx}
+                          to={`/products?category=exterior&filter=${encodeURIComponent(item)}`}
+                          className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
+                        >
+                          {item}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
 
                   {/* Enamel */}
                   <Link
@@ -195,6 +194,30 @@ const Navbar = () => {
                       ))}
                     </div>
                   </div>
+
+                  {/* Other Products */}
+                  <Link
+                    to="/products?category=other"
+                    className="block px-3 py-2 text-sm hover:bg-accent rounded-sm transition-colors"
+                  >
+                    Other Products
+                  </Link>
+
+                  {/* Wood coating */}
+                  <Link
+                    to="/products?category=wood-coating"
+                    className="block px-3 py-2 text-sm hover:bg-accent rounded-sm transition-colors"
+                  >
+                    Wood coating
+                  </Link>
+
+                  {/* Tools and Accessories */}
+                  <Link
+                    to="/products?category=tools"
+                    className="block px-3 py-2 text-sm hover:bg-accent rounded-sm transition-colors"
+                  >
+                    Tools and Accessories
+                  </Link>
                 </div>
               </div>
             </div>

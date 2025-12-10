@@ -25,7 +25,7 @@ const ProductSpecs = ({ specifications, downloads }: ProductSpecsProps) => {
   return (
     <section className="space-y-6">
       <h2 className="text-3xl font-bold text-foreground">Product Specifications</h2>
-      
+
       <Card className="border-border">
         <CardContent className="p-6">
           <div className="grid md:grid-cols-2 gap-6">
@@ -57,6 +57,7 @@ const ProductSpecs = ({ specifications, downloads }: ProductSpecsProps) => {
         </CardContent>
       </Card>
 
+      {/* Download buttons hidden as per request
       <div className="flex flex-col sm:flex-row gap-4">
         <Button variant="outline" className="flex-1" asChild>
           <a href={downloads.tds} download>
@@ -71,6 +72,7 @@ const ProductSpecs = ({ specifications, downloads }: ProductSpecsProps) => {
           </a>
         </Button>
       </div>
+      */}
     </section>
   );
 };
