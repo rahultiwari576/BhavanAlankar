@@ -30,11 +30,10 @@ const ColorSelector = ({ colors }: ColorSelectorProps) => {
               title={color.name}
             >
               <div
-                className={`aspect-square rounded-lg border-2 transition-all ${
-                  selectedColor.hex === color.hex
-                    ? "border-primary scale-110 shadow-lg"
-                    : "border-border hover:border-primary/50 hover:scale-105"
-                }`}
+                className={`aspect-square rounded-lg border-2 transition-all ${selectedColor.hex === color.hex
+                  ? "border-primary scale-110 shadow-lg"
+                  : "border-border hover:border-primary/50 hover:scale-105"
+                  }`}
                 style={{ backgroundColor: color.hex }}
               >
                 {selectedColor.hex === color.hex && (
@@ -67,9 +66,16 @@ const ColorSelector = ({ colors }: ColorSelectorProps) => {
           </div>
         </div>
 
-        <Button variant="outline" className="w-full">
-          View Full Color Catalogue
-        </Button>
+        <div className="mt-4 p-4 rounded-lg border border-primary/20 bg-primary/5">
+          <p className="text-sm text-center text-muted-foreground mb-3">
+            <span className="font-semibold text-primary">1500+ more colors available</span>
+          </p>
+          <Button variant="outline" className="w-full" asChild>
+            <a href="/color-catalogue">
+              View Full Color Catalogue
+            </a>
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );

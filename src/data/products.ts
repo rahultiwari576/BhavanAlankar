@@ -338,7 +338,15 @@ export const products: Product[] = [
       "Nerolac Impressions Kashmir High Sheen offers a top-notch sheen and a smooth and luxurious finish to the walls. It is based on Silver Ion Technology that kills 99% of bacteria on the painted surface and makes the environment at home safe and healthy. The whiteness, opacity, washability, stain resistance, flow & levelling, ease of application, anti-viral performance, anti-fungal performance and anti-bacterial performance are outstanding, creating a high-class sheen finish that keeps the wall awe-inspiring for years.",
       1100
     ),
-    features: ["Top-Notch Sheen", "Smooth & Luxurious Finish", "Silver Ion Technology", "Kills 99% Bacteria", "Anti-Viral Performance", "Anti-Fungal Performance", "Anti-Bacterial Performance", "Outstanding Washability", "Excellent Stain Resistance", "Superior Flow & Levelling", "Easy Application", "Long Lasting"],
+    features: ["No Smell", "Top-Notch Sheen", "Smooth & Luxurious Finish", "Silver Ion Technology", "Kills 99% Bacteria", "Anti-Viral Performance", "Anti-Fungal Performance", "Anti-Bacterial Performance", "Outstanding Washability", "Excellent Stain Resistance", "Superior Flow & Levelling", "Easy Application", "Long Lasting"],
+    specifications: {
+      coverage: "120-140 sq ft per liter per coat",
+      dryingTime: "2-4 hours (surface dry)",
+      recoatTime: "4-6 hours minimum",
+      finishType: "High Sheen",
+      dilution: "30-40% with clean water",
+      warranty: "8 years",
+    },
   },
   {
     ...createProduct(

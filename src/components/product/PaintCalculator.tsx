@@ -683,8 +683,8 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
               }}
             >
               <div className={`flex items-center space-x-3 p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group ${paintingType === "fresh"
-                  ? "border-primary bg-primary/10 shadow-lg scale-[1.02]"
-                  : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-md"
+                ? "border-primary bg-primary/10 shadow-lg scale-[1.02]"
+                : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-md"
                 }`}>
                 <RadioGroupItem value="fresh" id="fresh" className="group-hover:scale-110 transition-transform" />
                 <Label htmlFor="fresh" className="flex-1 cursor-pointer">
@@ -698,8 +698,8 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                 )}
               </div>
               <div className={`flex items-center space-x-3 p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group ${paintingType === "repaint"
-                  ? "border-primary bg-primary/10 shadow-lg scale-[1.02]"
-                  : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-md"
+                ? "border-primary bg-primary/10 shadow-lg scale-[1.02]"
+                : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-md"
                 }`}>
                 <RadioGroupItem value="repaint" id="repaint" className="group-hover:scale-110 transition-transform" />
                 <Label htmlFor="repaint" className="flex-1 cursor-pointer">
@@ -763,16 +763,9 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                     value={puttyCoats?.toString() || ""}
                     onValueChange={(value) => setPuttyCoats(parseInt(value))}
                   >
-                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${puttyCoats === 1
-                        ? "border-primary bg-primary/10 shadow-md"
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
-                      }`}>
-                      <RadioGroupItem value="1" id="putty-1" className="group-hover:scale-110 transition-transform" />
-                      <Label htmlFor="putty-1" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">1 Coat Putty</Label>
-                    </div>
                     <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${puttyCoats === 2
-                        ? "border-primary bg-primary/10 shadow-md"
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
+                      ? "border-primary bg-primary/10 shadow-md"
+                      : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
                       }`}>
                       <RadioGroupItem value="2" id="putty-2" className="group-hover:scale-110 transition-transform" />
                       <Label htmlFor="putty-2" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">2 Coat Putty</Label>
@@ -787,16 +780,9 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                     value={primerCoats?.toString() || ""}
                     onValueChange={(value) => setPrimerCoats(parseInt(value))}
                   >
-                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${primerCoats === 1
-                        ? "border-primary bg-primary/10 shadow-md"
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
-                      }`}>
-                      <RadioGroupItem value="1" id="primer-1" className="group-hover:scale-110 transition-transform" />
-                      <Label htmlFor="primer-1" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">1 Coat Primer</Label>
-                    </div>
                     <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${primerCoats === 2
-                        ? "border-primary bg-primary/10 shadow-md"
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
+                      ? "border-primary bg-primary/10 shadow-md"
+                      : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
                       }`}>
                       <RadioGroupItem value="2" id="primer-2" className="group-hover:scale-110 transition-transform" />
                       <Label htmlFor="primer-2" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">2 Coat Primer</Label>
@@ -812,15 +798,15 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                     onValueChange={(value) => setPaintCoats(parseInt(value))}
                   >
                     <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${paintCoats === 1
-                        ? "border-primary bg-primary/10 shadow-md"
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
+                      ? "border-primary bg-primary/10 shadow-md"
+                      : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
                       }`}>
                       <RadioGroupItem value="1" id="paint-1" className="group-hover:scale-110 transition-transform" />
                       <Label htmlFor="paint-1" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">1 Coat Painting</Label>
                     </div>
                     <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${paintCoats === 2
-                        ? "border-primary bg-primary/10 shadow-md"
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
+                      ? "border-primary bg-primary/10 shadow-md"
+                      : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
                       }`}>
                       <RadioGroupItem value="2" id="paint-2" className="group-hover:scale-110 transition-transform" />
                       <Label htmlFor="paint-2" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">2 Coat Painting</Label>
@@ -897,8 +883,8 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
               <div className="space-y-4">
                 <div
                   className={`p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group relative overflow-hidden ${serviceType === "popular"
-                      ? "border-primary bg-gradient-to-br from-primary/10 to-blue-400/10 shadow-lg scale-[1.02]"
-                      : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
+                    ? "border-primary bg-gradient-to-br from-primary/10 to-blue-400/10 shadow-lg scale-[1.02]"
+                    : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
                     }`}
                   onClick={() => setServiceType("popular")}
                 >
@@ -916,8 +902,8 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
 
                 <div
                   className={`p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group relative overflow-hidden ${serviceType === "premium"
-                      ? "border-primary bg-gradient-to-br from-blue-400/10 to-purple-400/10 shadow-lg scale-[1.02]"
-                      : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
+                    ? "border-primary bg-gradient-to-br from-blue-400/10 to-purple-400/10 shadow-lg scale-[1.02]"
+                    : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
                     }`}
                   onClick={() => setServiceType("premium")}
                 >
@@ -935,8 +921,8 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
 
                 <div
                   className={`p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group relative overflow-hidden ${serviceType === "luxury"
-                      ? "border-primary bg-gradient-to-br from-purple-400/10 to-pink-400/10 shadow-lg scale-[1.02]"
-                      : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
+                    ? "border-primary bg-gradient-to-br from-purple-400/10 to-pink-400/10 shadow-lg scale-[1.02]"
+                    : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
                     }`}
                   onClick={() => setServiceType("luxury")}
                 >
@@ -1102,8 +1088,8 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                 value={formData.name}
                 onChange={(e) => handleInputChange("name", e.target.value)}
                 className={`transition-all duration-300 ${formErrors.name
-                    ? "border-destructive focus:border-destructive focus:ring-destructive"
-                    : "focus:border-primary focus:ring-primary"
+                  ? "border-destructive focus:border-destructive focus:ring-destructive"
+                  : "focus:border-primary focus:ring-primary"
                   }`}
               />
               {formErrors.name && (
@@ -1123,8 +1109,8 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
                 className={`transition-all duration-300 ${formErrors.email
-                    ? "border-destructive focus:border-destructive focus:ring-destructive"
-                    : "focus:border-primary focus:ring-primary"
+                  ? "border-destructive focus:border-destructive focus:ring-destructive"
+                  : "focus:border-primary focus:ring-primary"
                   }`}
               />
               {formErrors.email && (
@@ -1144,8 +1130,8 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
                 className={`transition-all duration-300 ${formErrors.phone
-                    ? "border-destructive focus:border-destructive focus:ring-destructive"
-                    : "focus:border-primary focus:ring-primary"
+                  ? "border-destructive focus:border-destructive focus:ring-destructive"
+                  : "focus:border-primary focus:ring-primary"
                   }`}
               />
               {formErrors.phone && (
