@@ -39,7 +39,15 @@ const Products = () => {
     } else if (categoryLower.includes("designer") || categoryLower.includes("texture")) {
       return "specialty";
     } else if (categoryLower.includes("adhesive")) {
-      return "ancillary";
+      return "adhesive";
+    } else if (categoryLower.includes("tools") && categoryLower.includes("accessories")) {
+      return "tools-accessories";
+    } else if (categoryLower.includes("tools") || categoryLower.includes("accessories")) {
+      return "tools-accessories";
+    } else if (categoryLower.includes("other") && categoryLower.includes("products")) {
+      return "other-products";
+    } else if (categoryLower.includes("other")) {
+      return "other-products";
     }
 
     // Fallback: try direct match
@@ -75,6 +83,8 @@ const Products = () => {
       ancillary: [],
       "ancillary-primers": [],
       "ancillary-brushes": [],
+      "tools-accessories": [],
+      "other-products": [],
     };
 
     products.forEach((product) => {
@@ -118,6 +128,10 @@ const Products = () => {
         groups.waterproofing.push(product);
       } else if (category.includes("wood")) {
         groups["wood-coatings"].push(product);
+      } else if (category.includes("tools") || category.includes("accessories")) {
+        groups["tools-accessories"].push(product);
+      } else if (category.includes("other")) {
+        groups["other-products"].push(product);
       } else if (
         category.includes("texture") ||
         category.includes("designer") ||
@@ -260,6 +274,8 @@ const Products = () => {
           {shouldShowSection("exterior") && renderSection("exterior", "Exterior Wall Paints", groupedProducts.exterior)}
           {shouldShowSection("wood-coatings") && renderSection("wood-coatings", "Wood Coatings", groupedProducts["wood-coatings"])}
           {shouldShowSection("enamel") && renderSection("enamel", "Enamel NSE & PU Enamel", groupedProducts.enamel)}
+          {shouldShowSection("tools-accessories") && renderSection("tools-accessories", "Tools and Accessories", groupedProducts["tools-accessories"])}
+          {shouldShowSection("other-products") && renderSection("other-products", "Other Products", groupedProducts["other-products"])}
           {shouldShowSection("ancillary") && renderSection("ancillary", "Paint Ancillary", groupedProducts.ancillary)}
           {shouldShowSection("ancillary-primers") && renderSection("ancillary-primers", "Primers", filterAncillaryProducts(groupedProducts.ancillary, "primers"))}
           {shouldShowSection("ancillary-brushes") && renderSection("ancillary-brushes", "Brushes", filterAncillaryProducts(groupedProducts.ancillary, "brushes"))}

@@ -1295,6 +1295,287 @@ export const products: Product[] = [
       warranty: "N/A",
     },
   },
+
+  // ============================================
+  // TOOLS AND ACCESSORIES
+  // ============================================
+  {
+    ...createProduct(
+      "32",
+      "nerolac-paint-brushes",
+      "Nerolac Paint Brushes",
+      "Tools and Accessories",
+      "Popular",
+      "Professional Quality Paint Brushes",
+      "Nerolac Paint Brushes are professional-quality brushes designed for various painting applications. Available in multiple sizes including flat brushes for walls and doors, angled sash brushes for cutting in, and smaller brushes for detailed work. Features soft bristles for smooth application and durable construction.",
+      250
+    ),
+    features: ["Professional Quality", "Multiple Sizes", "Soft Bristles", "Durable Construction", "Smooth Application", "Easy to Clean", "Versatile Use"],
+    specifications: {
+      coverage: "N/A",
+      dryingTime: "N/A",
+      recoatTime: "N/A",
+      finishType: "Tool",
+      dilution: "N/A",
+      warranty: "N/A",
+    },
+  },
+  {
+    ...createProduct(
+      "33",
+      "nerolac-paint-rollers",
+      "Nerolac Paint Rollers",
+      "Tools and Accessories",
+      "Popular",
+      "Fast and Even Coverage Rollers",
+      "Nerolac Paint Rollers provide fast and even coverage for walls and ceilings. Available in different pile lengths: short pile for smooth surfaces, medium pile for light textures, and long pile for coarse exterior surfaces. Includes specialty texture rollers for decorative finishes.",
+      300
+    ),
+    features: ["Fast Coverage", "Even Application", "Multiple Pile Lengths", "Texture Options", "Durable", "Easy to Use", "Professional Results"],
+    specifications: {
+      coverage: "N/A",
+      dryingTime: "N/A",
+      recoatTime: "N/A",
+      finishType: "Tool",
+      dilution: "N/A",
+      warranty: "N/A",
+    },
+  },
+  {
+    ...createProduct(
+      "34",
+      "nerolac-nerofix-masking-tape",
+      "Nerolac Nerofix Masking Tape",
+      "Tools and Accessories",
+      "Popular",
+      "Professional Masking Tape for Clean Lines",
+      "Nerolac Nerofix Masking Tape is designed for protecting surfaces during painting. Features strong initial bond, water-resistant properties, and clean removal without residue. Available in various widths (20mm, 1 inch) and lengths (20 meters). Perfect for creating sharp, clean paint lines.",
+      150
+    ),
+    features: ["Strong Initial Bond", "Water Resistant", "Clean Removal", "No Residue", "Multiple Widths", "Professional Grade", "Easy Application"],
+    specifications: {
+      coverage: "N/A",
+      dryingTime: "N/A",
+      recoatTime: "N/A",
+      finishType: "Tool",
+      dilution: "N/A",
+      warranty: "N/A",
+    },
+  },
+  {
+    ...createProduct(
+      "35",
+      "nerolac-sandpaper",
+      "Nerolac Sandpaper",
+      "Tools and Accessories",
+      "Popular",
+      "Surface Preparation Sandpaper",
+      "Nerolac Sandpaper (Emery Paper) is essential for surface preparation and finishing. Available in various grits for different applications from coarse sanding to fine finishing. Ideal for wood surfaces, wall preparation, and achieving smooth finishes before painting.",
+      100
+    ),
+    features: ["Multiple Grits", "Surface Preparation", "Durable", "Versatile Use", "Professional Quality", "Long Lasting", "Smooth Finishing"],
+    specifications: {
+      coverage: "N/A",
+      dryingTime: "N/A",
+      recoatTime: "N/A",
+      finishType: "Tool",
+      dilution: "N/A",
+      warranty: "N/A",
+    },
+  },
+  {
+    ...createProduct(
+      "36",
+      "nerolac-roll-paper",
+      "Nerolac Roll Paper",
+      "Tools and Accessories",
+      "Popular",
+      "Surface Protection Roll Paper",
+      "Nerolac Roll Paper provides excellent surface protection during painting projects. Large rolls for covering floors, furniture, and other surfaces. Durable, tear-resistant, and easy to handle. Essential for professional painting jobs.",
+      200
+    ),
+    features: ["Large Coverage", "Tear Resistant", "Surface Protection", "Easy to Handle", "Durable", "Cost Effective", "Professional Use"],
+    specifications: {
+      coverage: "N/A",
+      dryingTime: "N/A",
+      recoatTime: "N/A",
+      finishType: "Tool",
+      dilution: "N/A",
+      warranty: "N/A",
+    },
+  },
+  {
+    ...createProduct(
+      "37",
+      "nerolac-dhalai-plastic",
+      "Nerolac Dhalai Plastic",
+      "Tools and Accessories",
+      "Popular",
+      "Heavy-Duty Protective Plastic Sheeting",
+      "Nerolac Dhalai Plastic is heavy-duty plastic sheeting designed for comprehensive surface protection during painting and construction work. Waterproof, durable, and reusable. Perfect for covering large areas, floors, and furniture.",
+      180
+    ),
+    features: ["Heavy Duty", "Waterproof", "Reusable", "Large Coverage", "Durable", "Easy to Spread", "Cost Effective"],
+    specifications: {
+      coverage: "N/A",
+      dryingTime: "N/A",
+      recoatTime: "N/A",
+      finishType: "Tool",
+      dilution: "N/A",
+      warranty: "N/A",
+    },
+  },
+  {
+    ...createProduct(
+      "38",
+      "nerolac-paint-strainers",
+      "Nerolac Paint Strainers",
+      "Tools and Accessories",
+      "Popular",
+      "Fine Mesh Paint Strainers",
+      "Nerolac Paint Strainers are fine mesh strainers designed to filter paint and remove lumps, debris, and impurities. Ensures smooth, professional paint application. Essential for achieving flawless finishes. Disposable and easy to use.",
+      80
+    ),
+    features: ["Fine Mesh", "Removes Impurities", "Smooth Application", "Professional Results", "Easy to Use", "Disposable", "Cost Effective"],
+    specifications: {
+      coverage: "N/A",
+      dryingTime: "N/A",
+      recoatTime: "N/A",
+      finishType: "Tool",
+      dilution: "N/A",
+      warranty: "N/A",
+    },
+  },
+
+  // ============================================
+  // OTHER PRODUCTS
+  // ============================================
+  {
+    ...createProduct(
+      "39",
+      "nerolac-beauty-acrylic-distemper",
+      "Nerolac Beauty Acrylic Distemper",
+      "Other Products",
+      "Popular",
+      "Premium Water-Based Acrylic Distemper",
+      "Nerolac Beauty Acrylic Distemper is a premium-quality, water-based acrylic paint designed for interior walls and ceilings. Provides an eye-soothing matte finish with brighter, cleaner shades. Offers good washability and antifungal properties, making it an economical choice for interior wall coatings.",
+      450
+    ),
+    features: ["Matte Finish", "Bright Shades", "Good Washability", "Antifungal Properties", "Economical", "Water-Based", "Interior Use"],
+    specifications: {
+      coverage: "140-160 sq ft per liter per coat",
+      dryingTime: "2-3 hours (surface dry)",
+      recoatTime: "4-6 hours minimum",
+      finishType: "Matte",
+      dilution: "40-50% with clean water",
+      warranty: "3-5 years",
+    },
+  },
+  {
+    ...createProduct(
+      "40",
+      "nerolac-acrylic-wall-putty",
+      "Nerolac Acrylic Wall Putty",
+      "Other Products",
+      "Premium",
+      "Smooth Surface Wall Putty",
+      "Nerolac Acrylic Wall Putty is a fine, white cement-based putty that creates a smooth and even surface by filling minor pores, cracks, dents, and undulations. Enhances paint lifespan and durability, improves adhesion, provides water resistance, and contributes to a superior aesthetic finish.",
+      550
+    ),
+    features: ["Smooth Finish", "Fills Cracks & Pores", "Water Resistant", "Enhances Paint Life", "Superior Adhesion", "Interior & Exterior", "Easy Application"],
+    specifications: {
+      coverage: "12-15 sq ft per kg",
+      dryingTime: "4-6 hours",
+      recoatTime: "6-8 hours minimum",
+      finishType: "Smooth Base",
+      dilution: "Mix with water as needed",
+      warranty: "N/A",
+    },
+  },
+  {
+    ...createProduct(
+      "41",
+      "gypsum-plaster-of-paris",
+      "Gypsum (Plaster of Paris)",
+      "Other Products",
+      "Popular",
+      "Versatile Construction Material",
+      "Gypsum (Plaster of Paris) is a naturally occurring mineral widely used in construction. Ideal for plasterboard, decorative plaster, gypsum fiberboard, and building plaster. Offers heat resistance, moisture resistance, sound absorbency, fire resistance, and durability. Quick-setting and easy to mold.",
+      350
+    ),
+    features: ["Quick Setting", "Fire Resistant", "Sound Absorbent", "Moisture Resistant", "Easy to Mold", "Versatile", "Durable"],
+    specifications: {
+      coverage: "As per application",
+      dryingTime: "20-30 minutes (initial set)",
+      recoatTime: "N/A",
+      finishType: "Plaster",
+      dilution: "Mix with water",
+      warranty: "N/A",
+    },
+  },
+  {
+    ...createProduct(
+      "42",
+      "snowcem-exterior-paint",
+      "Snowcem Exterior Paint",
+      "Other Products",
+      "Premium",
+      "Durable Cement-Based Exterior Paint",
+      "Snowcem is a premium cement-based paint designed for exterior surfaces. Supplied as powder mixed with water on-site. Offers exceptional durability, vibrant fade-resistant colors, and strong resistance to harsh weather including heavy rain, strong winds, and intense sunlight. Water-resistant and environmentally friendly.",
+      600
+    ),
+    features: ["Exceptional Durability", "Fade Resistant", "Weather Resistant", "Water Resistant", "Vibrant Colors", "Eco-Friendly", "Low VOC"],
+    specifications: {
+      coverage: "100-120 sq ft per kg",
+      dryingTime: "4-6 hours (surface dry)",
+      recoatTime: "8-12 hours minimum",
+      finishType: "Matte",
+      dilution: "Mix with water as per instructions",
+      warranty: "7-10 years",
+    },
+  },
+  {
+    ...createProduct(
+      "43",
+      "white-cement",
+      "White Cement",
+      "Other Products",
+      "Premium",
+      "Premium White Portland Cement",
+      "White Cement is a specialized Portland cement with pure white color, ideal for architectural finishes, grouts, tile adhesives, sculptures, and decorative elements. Offers high strength, smooth finish, high brightness, and excellent workability. Can be mixed with pigments for colored concrete.",
+      700
+    ),
+    features: ["Pure White Color", "High Strength", "Smooth Finish", "High Brightness", "Excellent Workability", "Versatile", "Premium Quality"],
+    specifications: {
+      coverage: "As per application",
+      dryingTime: "24 hours (initial set)",
+      recoatTime: "N/A",
+      finishType: "Smooth",
+      dilution: "Mix with water and sand",
+      warranty: "N/A",
+    },
+  },
+  {
+    ...createProduct(
+      "44",
+      "paint-strainers-other",
+      "Paint Strainers",
+      "Other Products",
+      "Popular",
+      "Essential Paint Filtering Tool",
+      "Paint Strainers are essential tools for filtering paint to remove lumps, debris, and impurities before application. Ensures smooth, professional results and prevents clogging of spray guns and rollers. Disposable fine mesh design for single-use convenience.",
+      80
+    ),
+    features: ["Fine Mesh Filter", "Removes Lumps", "Prevents Clogging", "Professional Results", "Disposable", "Easy to Use", "Cost Effective"],
+    specifications: {
+      coverage: "N/A",
+      dryingTime: "N/A",
+      recoatTime: "N/A",
+      finishType: "Tool",
+      dilution: "N/A",
+      warranty: "N/A",
+    },
+  },
 ];
 
 export const getProductBySlug = (slug: string): Product | undefined => {
@@ -1320,5 +1601,7 @@ export const categories = [
   "Waterproofing Solutions",
   "Interior Textures",
   "Exterior Textures",
+  "Tools and Accessories",
+  "Other Products",
   "Adhesive",
 ];
