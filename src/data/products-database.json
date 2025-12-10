@@ -1,0 +1,297 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "slug": "neu-latex-interior-paint",
+      "name": "Neu Latex Interior Paint",
+      "category": "Interior Wall Paints",
+      "subCategory": "Premium",
+      "tagline": "Premium Interior Emulsion Paint",
+      "description": "Neu Latex Interior Paint is a premium quality interior emulsion paint offering excellent coverage and smooth finish for your interior walls."
+    },
+    {
+      "id": "2",
+      "slug": "beauty-smooth-wow-white",
+      "name": "Beauty Smooth WOW White",
+      "category": "Interior Wall Paints",
+      "subCategory": "Popular",
+      "tagline": "Enhanced Whiteness with Smooth Finish",
+      "description": "Beauty Smooth WOW White offers enhanced whiteness with a smooth, elegant finish. Perfect for creating bright and clean interior spaces."
+    },
+    {
+      "id": "3",
+      "slug": "impressions-kashmir-high-sheen",
+      "name": "Impressions Kashmir High sheen",
+      "category": "Interior Wall Paints",
+      "subCategory": "Premium",
+      "tagline": "Luxurious High Sheen Finish",
+      "description": "Impressions Kashmir High sheen provides a luxurious high sheen finish with superior quality. Perfect for premium interior spaces requiring elegant appearance."
+    },
+    {
+      "id": "4",
+      "slug": "impressions-hd",
+      "name": "Impressions HD",
+      "category": "Interior Wall Paints",
+      "subCategory": "Premium",
+      "tagline": "High Definition Color Technology",
+      "description": "Impressions HD provides an exquisite look with clear HD colors and a rich, smooth finish. Highly resistant to staining and fading."
+    },
+    {
+      "id": "5",
+      "slug": "impressions-kashmir",
+      "name": "Impressions Kashmir",
+      "category": "Interior Wall Paints",
+      "subCategory": "Premium",
+      "tagline": "Superior Quality Acrylic Emulsion",
+      "description": "Impressions Kashmir is a superior quality 100% acrylic emulsion-based interior paint providing a luxurious finish with excellent durability."
+    },
+    {
+      "id": "6",
+      "slug": "kashmir-matt",
+      "name": "Kashmir Matt",
+      "category": "Interior Wall Paints",
+      "subCategory": "Premium",
+      "tagline": "Premium Matt Finish",
+      "description": "Kashmir Matt offers a premium matt finish with excellent coverage and smooth texture. Perfect for modern interior designs."
+    },
+    {
+      "id": "7",
+      "slug": "impressions-sheen",
+      "name": "Impressions Sheen",
+      "category": "Interior Wall Paints",
+      "subCategory": "Premium",
+      "tagline": "Elegant Sheen Finish",
+      "description": "Impressions Sheen provides an elegant sheen finish that enhances the beauty of your interior walls with superior quality."
+    },
+    {
+      "id": "8",
+      "slug": "beauty-gold-washable",
+      "name": "Beauty Gold Washable",
+      "category": "Interior Wall Paints",
+      "subCategory": "Popular",
+      "tagline": "Soft Sheen with Excellent Washability",
+      "description": "Beauty Gold Washable features a soft sheen finish with excellent stain-cleanability. Ensures surfaces remain fresh and vibrant with easy maintenance."
+    },
+    {
+      "id": "9",
+      "slug": "neu-latex-exterior",
+      "name": "Neu Latex Exterior",
+      "category": "Exterior Wall Paints",
+      "subCategory": "Premium",
+      "tagline": "Premium Exterior Emulsion Paint",
+      "description": "Neu Latex Exterior is a premium quality exterior emulsion paint offering excellent weather resistance and protection for your exterior walls."
+    },
+    {
+      "id": "10",
+      "slug": "suraksha-plus-wow-white",
+      "name": "Suraksha Plus WOW White",
+      "category": "Exterior Wall Paints",
+      "subCategory": "Popular",
+      "tagline": "Enhanced Whiteness with Protection",
+      "description": "Suraksha Plus WOW White offers enhanced whiteness with excellent protection against weather, dirt, and algae. Perfect for exterior walls."
+    },
+    {
+      "id": "11",
+      "slug": "excel-antipeel-wow-white",
+      "name": "Excel Antipeel Wow White",
+      "category": "Exterior Wall Paints",
+      "subCategory": "Premium",
+      "tagline": "Anti-Peel Technology with Enhanced Whiteness",
+      "description": "Excel Antipeel Wow White is formulated to prevent peeling and ensure long-lasting exterior walls with enhanced whiteness. Provides excellent adhesion and durability."
+    },
+    {
+      "id": "12",
+      "slug": "excel-everlast",
+      "name": "Excel Everlast",
+      "category": "Exterior Wall Paints",
+      "subCategory": "Premium",
+      "tagline": "Long-Lasting Exterior Protection",
+      "description": "Excel Everlast withstands weather, resists algae, and maintains vibrant colors for years. Provides excellent protection against harsh conditions."
+    },
+    {
+      "id": "13",
+      "slug": "nerolac-wonderwood",
+      "name": "Nerolac Wonderwood",
+      "category": "Wood Coatings",
+      "subCategory": "Premium",
+      "tagline": "Premium Wood Coating Finish",
+      "description": "Nerolac Wonderwood is a premium wood coating offering exceptional durability and aesthetic appeal. Provides excellent protection for wood surfaces."
+    },
+    {
+      "id": "14",
+      "slug": "nerolac-italian",
+      "name": "Nerolac Italian",
+      "category": "Wood Coatings",
+      "subCategory": "Premium",
+      "tagline": "Italian Style Wood Finish",
+      "description": "Nerolac Italian provides an elegant Italian-style finish for wood surfaces. Offers excellent gloss and scratch resistance with luxurious appearance."
+    },
+    {
+      "id": "15",
+      "slug": "wood-ancillary",
+      "name": "Wood Ancillary",
+      "category": "Wood Coatings",
+      "subCategory": "Popular",
+      "tagline": "Essential Wood Coating Accessories",
+      "description": "Wood Ancillary includes essential accessories and complementary products for wood coating applications, ensuring complete wood protection."
+    },
+    {
+      "id": "16",
+      "slug": "nerolac-pu-enamel-10-in-1",
+      "name": "Nerolac PU Enamel 10 in 1",
+      "category": "Metal Enamel Paints",
+      "subCategory": "Premium",
+      "tagline": "Polyurethane Modified Enamel - 10 in 1 Benefits",
+      "description": "Nerolac PU Enamel 10 in 1 is a PU modified Alkyd based general purpose enamel for the protection of Metal, Wood & Masonry substrate."
+    },
+    {
+      "id": "17",
+      "slug": "nerolac-synthetic-hi-gloss-enamel",
+      "name": "Nerolac Synthetic Hi-Gloss Enamel",
+      "category": "Metal Enamel Paints",
+      "subCategory": "Popular",
+      "tagline": "High-Quality Solvent-Based Enamel",
+      "description": "A time tasted and proven, high quality solvent based hi-gloss enamel paint recommended for suitably primed interior and exterior wood, metal and walls.. Perfect for metal surfaces requiring high-gloss finish."
+    },
+    {
+      "id": "18",
+      "slug": "nerolac-satin-enamel",
+      "name": "Nerolac Satin Enamel",
+      "category": "Metal Enamel Paints",
+      "subCategory": "Popular",
+      "tagline": "Smooth Satin-Like Finish",
+      "description": "A specially formulated metal enamel paint to give an excellent finish, resembling the smoothness of satin to masonry, wood and metal surfaces."
+    },
+    {
+      "id": "19",
+      "slug": "nerolac-zinc-yellow-primer",
+      "name": "Nerolac Zinc Yellow Primer",
+      "category": "Paint Ancillary",
+      "subCategory": "Premium",
+      "tagline": "Excellent Rust Protection",
+      "description": "Nerolac Zinc Yellow Primer provides excellent rust protection to metal surfaces, keeping them corrosion-free. Ideal for metal structures and gates."
+    },
+    {
+      "id": "20",
+      "slug": "nerolac-premium-primer-st",
+      "name": "Nerolac Premium Primer ST",
+      "category": "Paint Ancillary",
+      "subCategory": "Premium",
+      "tagline": "Premium Solvent-Based Primer",
+      "description": "Nerolac Premium Primer ST is a premium solvent-based primer providing excellent adhesion and surface preparation for various substrates."
+    },
+    {
+      "id": "21",
+      "slug": "nerolac-premium-primer-wb",
+      "name": "Nerolac Premium Primer WB",
+      "category": "Paint Ancillary",
+      "subCategory": "Premium",
+      "tagline": "Premium Water-Based Primer",
+      "description": "Nerolac Premium Primer WB is a premium water-based primer offering excellent adhesion and surface preparation. Eco-friendly and easy to apply."
+    },
+    {
+      "id": "22",
+      "slug": "nerolac-perma-crystal-seal",
+      "name": "Nerolac Perma Crystal Seal",
+      "category": "Waterproofing Solutions",
+      "subCategory": "Popular",
+      "tagline": "Acrylic Copolymer Anti-Damp",
+      "description": "Nerolac Perma Crystal Seal is an acrylic copolymer-based, anti-damp undercoat for interior surfaces. Provides good protection against moisture and dampness at an affordable price."
+    },
+    {
+      "id": "23",
+      "slug": "nerolac-perma-no-heat",
+      "name": "Nerolac Perma No Heat",
+      "category": "Waterproofing Solutions",
+      "subCategory": "Popular",
+      "tagline": "Heat Reduction Coating",
+      "description": "Nerolac Perma No Heat is designed to reduce heat absorption, keeping interiors cooler. Perfect for roofs and exterior walls in hot climates. Also provides waterproofing benefits."
+    },
+    {
+      "id": "24",
+      "slug": "impressions-glitter-finish",
+      "name": "Impressions Glitter Finish",
+      "category": "Interior Textures",
+      "subCategory": "Premium",
+      "tagline": "Sparkling Glitter Finish",
+      "description": "Impressions Glitter Finish adds a sparkling effect to walls, enhancing aesthetic appeal. Perfect for feature walls and decorative applications."
+    },
+    {
+      "id": "25",
+      "slug": "nerolac-impressions-ideaz",
+      "name": "Nerolac Impressions Ideaz",
+      "category": "Interior Textures",
+      "subCategory": "Premium",
+      "tagline": "Creative Texture Designs",
+      "description": "Nerolac Impressions Ideaz offers creative texture designs for unique wall finishes. Allows customization for personalized interior designs."
+    },
+    {
+      "id": "26",
+      "slug": "nerolac-impressions-metallic-finish",
+      "name": "Nerolac Impressions Metallic Finish",
+      "category": "Interior Textures",
+      "subCategory": "Premium",
+      "tagline": "Elegant Metallic Sheen",
+      "description": "Nerolac Impressions Metallic Finish provides a metallic sheen, adding elegance to interiors. Perfect for modern and contemporary designs."
+    },
+    {
+      "id": "27",
+      "slug": "kansai-select",
+      "name": "Kansai Select",
+      "category": "Interior Textures",
+      "subCategory": "Premium",
+      "tagline": "Premium Texture Selection",
+      "description": "Kansai Select offers a premium selection of texture finishes for interior walls. Provides unique and elegant texture options for sophisticated interiors."
+    },
+    {
+      "id": "28",
+      "slug": "excel-texture-finish-dholpur",
+      "name": "Excel Texture Finish - Dholpur",
+      "category": "Exterior Textures",
+      "subCategory": "Premium",
+      "tagline": "Dholpur Stone Texture Finish",
+      "description": "Excel Texture Finish - Dholpur provides a beautiful Dholpur stone texture finish for exterior walls. Offers excellent weather resistance and aesthetic appeal."
+    },
+    {
+      "id": "29",
+      "slug": "excel-texture-finish-rigor",
+      "name": "Excel Texture Finish - Rigor",
+      "category": "Exterior Textures",
+      "subCategory": "Premium",
+      "tagline": "Rigor Texture Finish",
+      "description": "Excel Texture Finish - Rigor offers a unique rigor texture finish for exterior walls. Provides excellent protection and distinctive appearance."
+    },
+    {
+      "id": "30",
+      "slug": "excel-texture-finish-roller",
+      "name": "Excel Texture Finish - Roller",
+      "category": "Exterior Textures",
+      "subCategory": "Premium",
+      "tagline": "Roller Applied Texture Finish",
+      "description": "Nerolac Excel Roller Finish is a high-build acrylic textured intermediate coating system for exterior surfaces. It provides an excellent finish pattern for exterior walls. It also offers excellent crack resistance, seepage resistance, and effectively hides surface unevenness. This textured finish is suitable for all types of climatic conditions."
+    },
+    {
+      "id": "31",
+      "slug": "adhesive",
+      "name": "Adhesive",
+      "category": "Adhesive",
+      "subCategory": "Popular",
+      "tagline": "Versatile Multi-Purpose Adhesive",
+      "description": "Nerolac Adhesive is a versatile adhesive suitable for various applications including tiles, wood, and general bonding needs. Provides strong and reliable bonding."
+    }
+  ],
+  "categories": [
+    "Interior Wall Paints",
+    "Exterior Wall Paints",
+    "Wood Coatings",
+    "Metal Enamel Paints",
+    "Paint Ancillary",
+    "Waterproofing Solutions",
+    "Interior Textures",
+    "Exterior Textures",
+    "Adhesive"
+  ],
+  "lastUpdated": "2025-01-27",
+  "source": "nerolac.com"
+}
+
