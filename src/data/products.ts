@@ -476,15 +476,162 @@ export const products: Product[] = [
   {
     ...createProduct(
       "13",
-      "nerolac-wonderwood",
-      "Nerolac Wonderwood",
+      "wonderwood-gloria-epoxy-primer",
+      "Wonderwood Gloria Epoxy Primer",
       "Wood Coatings",
       "Premium",
-      "Premium Wood Coating Finish",
-      "Nerolac Wonderwood is a premium wood coating offering exceptional durability and aesthetic appeal. Provides excellent protection for wood surfaces.",
+      "High-Performance Epoxy-Based Wood Primer",
+      "Nerolac Wonderwood Gloria Epoxy Primer is a high-performance, two-component, epoxy-based primer formulated for wood surfaces. It provides excellent adhesion, durability, and protection, serving as a solid foundation for subsequent topcoats.",
+      950
+    ),
+    features: ["Two-Component Epoxy", "Excellent Adhesion", "Corrosion Resistant", "Durable Finish", "Smooth Surface Preparation", "Fast Drying", "Water Resistant", "Interior & Exterior Use"],
+    specifications: {
+      coverage: "100-120 sq ft per liter per coat",
+      dryingTime: "4-6 hours (surface dry)",
+      recoatTime: "8-12 hours minimum",
+      finishType: "Primer",
+      dilution: "As per manufacturer's instructions",
+      warranty: "5 years",
+    },
+  },
+  {
+    ...createProduct(
+      "14",
+      "wonderwood-nc-sanding-sealer",
+      "Wonderwood NC Sanding Sealer",
+      "Wood Coatings",
+      "Premium",
+      "Quick-Drying Wood Sanding Sealer",
+      "Nerolac Wonderwood NC Sanding Sealer is a quick-drying wood sanding sealer that delivers a smooth finish with excellent filling properties, recommended for filling wood grains before applying topcoats.",
+      850
+    ),
+    features: ["Quick Drying", "Excellent Filling Properties", "Smooth Finish", "Grain Filling", "Easy Sanding", "Good Build", "Recommended for Topcoat Preparation"],
+    specifications: {
+      coverage: "100-120 sq ft per liter per coat",
+      dryingTime: "2-3 hours (surface dry)",
+      recoatTime: "4-6 hours minimum",
+      finishType: "Sealer",
+      dilution: "As per manufacturer's instructions",
+      warranty: "3-5 years",
+    },
+  },
+  {
+    ...createProduct(
+      "15",
+      "wonderwood-melamine",
+      "Wonderwood Melamine",
+      "Wood Coatings",
+      "Premium",
+      "Two-Component Acid Catalyzed Wood Finish",
+      "Nerolac Wonderwood Melamine is a two-component acid catalyzed wood finish that creates a tough and durable coating on various wood types, veneer, and medium-density fiberboard, offering excellent stain resistance.",
+      1100
+    ),
+    features: ["Two-Component System", "Acid Catalyzed", "Tough & Durable", "Excellent Stain Resistance", "Suitable for Wood, Veneer & MDF", "High Performance", "Professional Grade"],
+    specifications: {
+      coverage: "100-120 sq ft per liter per coat",
+      dryingTime: "4-6 hours (surface dry)",
+      recoatTime: "8-12 hours minimum",
+      finishType: "Satin / Matt",
+      dilution: "As per manufacturer's instructions",
+      warranty: "5 years",
+    },
+  },
+  {
+    ...createProduct(
+      "16",
+      "wonderwood-gloria-2k-pu-interior",
+      "Wonderwood Gloria 2K PU Interior",
+      "Wood Coatings",
+      "Premium",
+      "Luxury Two-Component Polyurethane Wood Coating",
+      "Nerolac Wonderwood Gloria 2K PU Interior is a luxury two-component polyurethane wood coating specifically formulated for interior wooden furniture and veneers, providing a tough film with excellent scratch and stain resistance and fast drying properties.",
+      1400
+    ),
+    features: ["Two-Component PU", "Luxury Finish", "Excellent Scratch Resistance", "Superior Stain Resistance", "Fast Drying", "Tough Film", "Interior Furniture Specialist", "High Gloss"],
+    specifications: {
+      coverage: "100-120 sq ft per liter per coat",
+      dryingTime: "4-6 hours (surface dry)",
+      recoatTime: "8-12 hours minimum",
+      finishType: "High Gloss",
+      dilution: "As per manufacturer's instructions",
+      warranty: "7 years",
+    },
+  },
+  {
+    ...createProduct(
+      "17",
+      "wonderwood-gloria-2k-pu-exterior",
+      "Wonderwood Gloria 2K PU Exterior",
+      "Wood Coatings",
+      "Premium",
+      "Weather-Resistant Exterior Wood Coating",
+      "Nerolac Wonderwood Gloria 2K PU Exterior is specially formulated for exterior wooden surfaces with weather resistance and non-yellowing properties, providing long-lasting protection against harsh outdoor conditions.",
+      1500
+    ),
+    features: ["Weather Resistant", "Non-Yellowing", "UV Protection", "Two-Component PU", "Exterior Specialist", "Durable Protection", "Long Lasting", "High Gloss"],
+    specifications: {
+      coverage: "100-120 sq ft per liter per coat",
+      dryingTime: "4-6 hours (surface dry)",
+      recoatTime: "8-12 hours minimum",
+      finishType: "High Gloss",
+      dilution: "As per manufacturer's instructions",
+      warranty: "7 years",
+    },
+  },
+  {
+    ...createProduct(
+      "18",
+      "wonderwood-2k-pu-italian",
+      "Wonderwood 2K PU Italian",
+      "Wood Coatings",
+      "Premium",
+      "Italian Style Premium Wood Finish",
+      "Nerolac Wonderwood 2K PU Italian provides an elegant Italian-style finish for wood surfaces with superior gloss, scratch resistance, and luxurious appearance, perfect for high-end furniture and interiors.",
+      1600
+    ),
+    features: ["Italian Style Finish", "Premium Quality", "Superior Gloss", "Excellent Scratch Resistance", "Luxurious Appearance", "Two-Component PU", "High-End Furniture", "Professional Grade"],
+    specifications: {
+      coverage: "100-120 sq ft per liter per coat",
+      dryingTime: "4-6 hours (surface dry)",
+      recoatTime: "8-12 hours minimum",
+      finishType: "High Gloss",
+      dilution: "As per manufacturer's instructions",
+      warranty: "7 years",
+    },
+  },
+  {
+    ...createProduct(
+      "19",
+      "wonderwood-filodent",
+      "Wonderwood Filodent",
+      "Wood Coatings",
+      "Popular",
+      "Wood Filler and Grain Sealer",
+      "Nerolac Wonderwood Filodent is a specialized wood filler and grain sealer designed to fill wood pores and grains, creating a smooth surface for finishing coats. Ideal for preparing wood surfaces before applying topcoats.",
+      700
+    ),
+    features: ["Wood Filler", "Grain Sealer", "Smooth Surface", "Easy Application", "Good Filling Properties", "Surface Preparation", "Economical"],
+    specifications: {
+      coverage: "80-100 sq ft per liter per coat",
+      dryingTime: "2-4 hours (surface dry)",
+      recoatTime: "4-6 hours minimum",
+      finishType: "Filler/Sealer",
+      dilution: "As per manufacturer's instructions",
+      warranty: "3 years",
+    },
+  },
+  {
+    ...createProduct(
+      "20",
+      "wonderwood-gloria",
+      "Wonderwood Gloria",
+      "Wood Coatings",
+      "Premium",
+      "Premium Wood Coating System",
+      "Nerolac Wonderwood Gloria is a premium wood coating system offering exceptional durability and aesthetic appeal. Part of the Gloria range, it provides excellent protection and beautiful finish for wood surfaces.",
       1200
     ),
-    features: ["Premium Quality", "Durable", "Aesthetic Appeal", "Wood Protection"],
+    features: ["Premium Quality", "Durable Finish", "Aesthetic Appeal", "Wood Protection", "Gloria Range", "Professional Grade", "Long Lasting"],
     specifications: {
       coverage: "100-120 sq ft per liter per coat",
       dryingTime: "4-6 hours (surface dry)",
@@ -493,40 +640,6 @@ export const products: Product[] = [
       dilution: "As per manufacturer's instructions",
       warranty: "5 years",
     },
-  },
-  {
-    ...createProduct(
-      "14",
-      "nerolac-italian",
-      "Nerolac Italian",
-      "Wood Coatings",
-      "Premium",
-      "Italian Style Wood Finish",
-      "Nerolac Italian provides an elegant Italian-style finish for wood surfaces. Offers excellent gloss and scratch resistance with luxurious appearance.",
-      1300
-    ),
-    features: ["Italian Style", "High Gloss", "Scratch Resistant", "Luxurious"],
-    specifications: {
-      coverage: "100-120 sq ft per liter per coat",
-      dryingTime: "4-6 hours (surface dry)",
-      recoatTime: "8-12 hours minimum",
-      finishType: "High Gloss",
-      dilution: "As per manufacturer's instructions",
-      warranty: "5 years",
-    },
-  },
-  {
-    ...createProduct(
-      "15",
-      "wood-ancillary",
-      "Wood Ancillary",
-      "Wood Coatings",
-      "Popular",
-      "Essential Wood Coating Accessories",
-      "Wood Ancillary includes essential accessories and complementary products for wood coating applications, ensuring complete wood protection.",
-      400
-    ),
-    features: ["Essential Accessories", "Complete Protection", "Easy Application", "Reliable"],
   },
 
   // ============================================

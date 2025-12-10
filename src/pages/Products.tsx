@@ -16,9 +16,9 @@ const Products = () => {
   // Map category names from URL to section IDs
   const mapCategoryToSection = (categoryName: string | null): string | null => {
     if (!categoryName) return null;
-    
+
     const categoryLower = categoryName.toLowerCase();
-    
+
     // Map category names to section IDs
     if (categoryLower.includes("interior") && categoryLower.includes("wall")) {
       return "interior";
@@ -33,13 +33,15 @@ const Products = () => {
     } else if (categoryLower.includes("waterproofing")) {
       return "waterproofing";
     } else if (categoryLower.includes("wood") && categoryLower.includes("coating")) {
-      return "enamel"; // Wood coatings might be enamel or specialty
+      return "wood-coatings";
+    } else if (categoryLower.includes("wood")) {
+      return "wood-coatings";
     } else if (categoryLower.includes("designer") || categoryLower.includes("texture")) {
       return "specialty";
     } else if (categoryLower.includes("adhesive")) {
       return "ancillary";
     }
-    
+
     // Fallback: try direct match
     return categoryLower;
   };
@@ -65,6 +67,7 @@ const Products = () => {
     const groups: { [key: string]: typeof products } = {
       interior: [],
       exterior: [],
+      "wood-coatings": [],
       primers: [],
       specialty: [],
       enamel: [],
@@ -77,7 +80,7 @@ const Products = () => {
     products.forEach((product) => {
       const category = product.category.toLowerCase();
       const productName = product.name.toLowerCase();
-      
+
       if (category.includes("interior") && !category.includes("texture")) {
         groups.interior.push(product);
       } else if (category.includes("exterior")) {
@@ -113,6 +116,8 @@ const Products = () => {
         groups.enamel.push(product);
       } else if (category.includes("waterproofing")) {
         groups.waterproofing.push(product);
+      } else if (category.includes("wood")) {
+        groups["wood-coatings"].push(product);
       } else if (
         category.includes("texture") ||
         category.includes("designer") ||
@@ -129,8 +134,8 @@ const Products = () => {
   }, []);
 
   const renderProductCard = (product: typeof products[0], index: number) => (
-    <Card 
-      key={product.id} 
+    <Card
+      key={product.id}
       className="border-border hover-lift overflow-hidden group card-transition hover:shadow-2xl hover:border-primary/40 animate-fade-in-up"
       style={{ animationDelay: `${0.05 * index}s` }}
     >
@@ -167,7 +172,7 @@ const Products = () => {
 
   const renderSection = (id: string, title: string, productsList: typeof products) => {
     if (productsList.length === 0) return null;
-    
+
     return (
       <section id={id} className="scroll-mt-24 mb-16">
         <div className="text-center mb-8">
@@ -188,9 +193,9 @@ const Products = () => {
   // Filter products based on URL parameters
   const shouldShowSection = (category: string) => {
     if (!categoryParam) return true; // Show all if no category param
-    
+
     const mappedCategory = mapCategoryToSection(categoryParam);
-    
+
     // Handle ancillary subcategories
     if (mappedCategory === "ancillary" || categoryParam.toLowerCase() === "ancillary") {
       if (subcategoryParam === "primers" && category === "ancillary-primers") return true;
@@ -198,14 +203,14 @@ const Products = () => {
       if (!subcategoryParam && category === "ancillary") return true;
       return false;
     }
-    
+
     return mappedCategory === category || categoryParam.toLowerCase() === category;
   };
 
   // Filter products by name for ancillary subcategories
   const filterAncillaryProducts = (productsList: typeof products, subcategory: string) => {
     if (!subcategory) return productsList;
-    
+
     const filterKeywords: { [key: string]: string[] } = {
       primers: [
         "economy",
@@ -227,12 +232,12 @@ const Products = () => {
         "brush",
       ],
     };
-    
+
     const keywords = filterKeywords[subcategory] || [];
     return productsList.filter((product) => {
       const productName = product.name.toLowerCase();
       const productCategory = product.category.toLowerCase();
-      return keywords.some((keyword) => 
+      return keywords.some((keyword) =>
         productName.includes(keyword) || productCategory.includes(keyword)
       );
     });
@@ -253,12 +258,13 @@ const Products = () => {
           {/* Show sections based on category filter */}
           {shouldShowSection("interior") && renderSection("interior", "Interior Wall Paints", groupedProducts.interior)}
           {shouldShowSection("exterior") && renderSection("exterior", "Exterior Wall Paints", groupedProducts.exterior)}
+          {shouldShowSection("wood-coatings") && renderSection("wood-coatings", "Wood Coatings", groupedProducts["wood-coatings"])}
           {shouldShowSection("enamel") && renderSection("enamel", "Enamel NSE & PU Enamel", groupedProducts.enamel)}
           {shouldShowSection("ancillary") && renderSection("ancillary", "Paint Ancillary", groupedProducts.ancillary)}
           {shouldShowSection("ancillary-primers") && renderSection("ancillary-primers", "Primers", filterAncillaryProducts(groupedProducts.ancillary, "primers"))}
           {shouldShowSection("ancillary-brushes") && renderSection("ancillary-brushes", "Brushes", filterAncillaryProducts(groupedProducts.ancillary, "brushes"))}
           {shouldShowSection("waterproofing") && renderSection("waterproofing", "Waterproofing Solutions", groupedProducts.waterproofing)}
-          
+
           {/* Commented out sections - hidden when category filter is active */}
           {/* {renderSection("primers", "Primers", groupedProducts.primers)} */}
           {/* {renderSection("specialty", "Specialty Coatings", groupedProducts.specialty)} */}
