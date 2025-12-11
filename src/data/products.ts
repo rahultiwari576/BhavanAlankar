@@ -203,6 +203,33 @@ const getProductImages = (slug: string, category: string): string[] => {
     "adhesive": [
       "https://www.nerolac.com/sites/default/files/2025-09/Adhesive.png"
     ],
+    "wonderwood-gloria-epoxy-primer": [
+      "https://www.nerolac.com/sites/default/files/2024-12/205-x-258_0001_Gloria-Epoxy-Primer-Tin_3D-Pack_R2_Hi-Res.png"
+    ],
+    "wonderwood-nc-sanding-sealer": [
+      "https://www.nerolac.com/sites/default/files/2025-01/Woodcoat-NC-Sealer_TIN_205x258.png"
+    ],
+    "wonderwood-melamine": [
+      "https://www.nerolac.com/sites/default/files/2024-10/Woodcoat-Melamine_TIN_205x258_1.png"
+    ],
+    "wonderwood-gloria-2k-pu-interior": [
+      "https://www.nerolac.com/sites/default/files/2024-10/Wonderwood-2K-PU-Interior.png"
+    ],
+    "wonderwood-gloria-2k-pu-exterior": [
+      "https://www.nerolac.com/sites/default/files/2024-10/Wonderwood-2K-PU-Interior.png"
+    ],
+    "wonderwood-2k-pu-italian": [
+      "https://www.nerolac.com/sites/default/files/2025-01/NerolacWoodcoatItalian-2KPU-Interior_TIN_3DPack_R2_205x258.png"
+    ],
+    "wonderwood-gloria": [
+      "https://www.nerolac.com/sites/default/files/2024-12/NerolacWoodcoatWonderwoodGloria_TIN_3DPack_R1_Lo-Res_205x258_0.png"
+    ],
+    "nerolac-beauty-acrylic-distemper": [
+      "https://www.nerolac.com/sites/default/files/styles/product_image/public/2025-01/Beauty-Acrylic-Distemper-205x258.png"
+    ],
+    "nerolac-acrylic-wall-putty": [
+      "https://www.nerolac.com/sites/default/files/styles/product_image/public/2025-01/Nerolac-Wall-Putty-205x258.png"
+    ],
   };
 
   // Return mapped images or default placeholder
