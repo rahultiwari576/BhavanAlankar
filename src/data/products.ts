@@ -191,17 +191,12 @@ const getProductImages = (slug: string, category: string): string[] => {
     "suraksha-sheen": [
       "https://www.nerolac.com/sites/default/files/2022-10/Nerolac-Suraksha-sheen.png"
     ],
-    "suraksha": [
-      "https://www.nerolac.com/sites/default/files/2022-10/Suraksha.png"
-    ],
+    "suraksha": [],
     "excel-mica-marble-stretch-sheen-nxt": [
       "https://www.nerolac.com/sites/default/files/2025-09/Neroalc-Excel-Mica-Marble-Strech-Sheen-%26-Mica-Marble_1.png"
     ],
     "mica-marble-stretch-sheen": [
       "https://www.nerolac.com/sites/default/files/2025-09/Neroalc-Excel-Mica-Marble-Strech-Sheen-%26-Mica-Marble_1.png"
-    ],
-    "excel-texture-finish-roller": [
-      "https://www.nerolac.com/sites/default/files/2025-07/Texture%20-%2020kg%20Bucket.png"
     ],
     "adhesive": [
       "https://www.nerolac.com/sites/default/files/2025-09/Adhesive.png"
@@ -237,6 +232,12 @@ const getProductImages = (slug: string, category: string): string[] => {
   };
 
   // Return mapped images or default placeholder
+  if (slug === "suraksha-sheen") {
+    return productImageMap[slug] || [
+      "https://www.nerolac.com/sites/default/files/2022-10/Nerolac-Suraksha-sheen.png"
+    ];
+  }
+
   return productImageMap[slug] || [
     "https://www.nerolac.com/sites/default/files/2025-07/Texture%20-%2020kg%20Bucket.png"
   ];
@@ -1397,27 +1398,7 @@ export const products: Product[] = [
       warranty: "5-10 years",
     },
   },
-  {
-    ...createProduct(
-      "30",
-      "excel-texture-finish-roller",
-      "Excel Texture Finish - Roller",
-      "Exterior Textures",
-      "Premium",
-      "Roller Applied Texture Finish",
-      "Nerolac Excel Roller Finish is a high-build acrylic textured intermediate coating system for exterior surfaces. It provides an excellent finish pattern for exterior walls. It also offers excellent crack resistance, seepage resistance, and effectively hides surface unevenness. This textured finish is suitable for all types of climatic conditions.",
-      1050
-    ),
-    features: ["Easy Application", "Roller Applied", "Weather Resistant", "Beautiful Finish"],
-    specifications: {
-      coverage: "80-100 sq ft per liter per coat",
-      dryingTime: "4-6 hours (surface dry)",
-      recoatTime: "6-8 hours minimum",
-      finishType: "Textured",
-      dilution: "As per manufacturer's instructions",
-      warranty: "5-10 years",
-    },
-  },
+
 
   // ============================================
   // ADHESIVE
