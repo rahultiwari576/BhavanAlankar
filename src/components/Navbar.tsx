@@ -39,7 +39,12 @@ const Navbar = () => {
       "Suraksha sheen",
       "Surakha",
     ],
-    enamel: ["Enamel NSE & PU enamel"],
+    enamel: [
+      "NSE",
+      "PU enamel",
+      "Thinners",
+      "Tarpentine oil",
+    ],
     waterproofing: [
       "Perma damp protect interior",
       "Perma damp protect exterior",
@@ -47,6 +52,33 @@ const Navbar = () => {
       "No damp +",
       "Super 2K",
       "Waterproof putty",
+    ],
+    woodCoating: [
+      "Filodent",
+      "Epoxy primer",
+      "Sealer",
+      "Melamine",
+      "Gloria",
+      "2K PU Interior",
+      "2K PU Exterior",
+      "2K PU Italian",
+    ],
+    otherProducts: [
+      "Distemper",
+      "Putty",
+      "Gypsum(PoP)",
+      "Snowcem",
+      "White Cement",
+      "Strainers",
+    ],
+    toolsAccessories: [
+      "Brushes",
+      "Rollers",
+      "Masking Tape",
+      "Sand paper",
+      "Roll Paper",
+      "Dhalai Plastic",
+      "Strainers",
     ],
     primers: [
       "Economy",
@@ -100,58 +132,68 @@ const Navbar = () => {
                 Products
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
               </button>
-              
-              <div className={`absolute top-full left-0 mt-1 w-80 bg-popover border border-border rounded-md shadow-lg z-50 p-2 transition-all duration-200 ${
-                isProductsHovered 
-                  ? "opacity-100 visible translate-y-0" 
-                  : "opacity-0 invisible -translate-y-2 pointer-events-none"
-              }`}>
-                <div className="space-y-1">
-                    {/* Interior */}
-                    <div className="relative group/sub">
-                      <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
-                        Interior
-                        <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
-                      </div>
-                      <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
-                        {productCategories.interior.map((item, idx) => (
-                          <Link
-                            key={idx}
-                            to={`/products?category=interior&filter=${encodeURIComponent(item)}`}
-                            className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
-                          >
-                            {item}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
 
-                    {/* Exterior */}
-                    <div className="relative group/sub">
-                      <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
-                        Exterior
-                        <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
-                      </div>
-                      <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
-                        {productCategories.exterior.map((item, idx) => (
-                          <Link
-                            key={idx}
-                            to={`/products?category=exterior&filter=${encodeURIComponent(item)}`}
-                            className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
-                          >
-                            {item}
-                          </Link>
-                        ))}
-                      </div>
+              <div className={`absolute top-full left-0 mt-1 w-80 bg-popover border border-border rounded-md shadow-lg z-50 p-2 transition-all duration-200 ${isProductsHovered
+                ? "opacity-100 visible translate-y-0"
+                : "opacity-0 invisible -translate-y-2 pointer-events-none"
+                }`}>
+                <div className="space-y-1">
+                  {/* Interior */}
+                  <div className="relative group/sub">
+                    <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
+                      Interior
+                      <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
                     </div>
+                    <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
+                      {productCategories.interior.map((item, idx) => (
+                        <Link
+                          key={idx}
+                          to={`/products?category=interior&filter=${encodeURIComponent(item)}`}
+                          className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
+                        >
+                          {item}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Exterior */}
+                  <div className="relative group/sub">
+                    <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
+                      Exterior
+                      <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
+                    </div>
+                    <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
+                      {productCategories.exterior.map((item, idx) => (
+                        <Link
+                          key={idx}
+                          to={`/products?category=exterior&filter=${encodeURIComponent(item)}`}
+                          className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
+                        >
+                          {item}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
 
                   {/* Enamel */}
-                  <Link
-                    to="/products?category=enamel"
-                    className="block px-3 py-2 text-sm hover:bg-accent rounded-sm transition-colors"
-                  >
-                    Enamel NSE & PU enamel
-                  </Link>
+                  <div className="relative group/sub">
+                    <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
+                      Enamel
+                      <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
+                    </div>
+                    <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
+                      {productCategories.enamel.map((item, idx) => (
+                        <Link
+                          key={idx}
+                          to={`/products?category=enamel&filter=${encodeURIComponent(item)}`}
+                          className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
+                        >
+                          {item}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
 
                   {/* Paint Ancillary */}
                   <div className="relative group/sub">
@@ -188,6 +230,63 @@ const Navbar = () => {
                         <Link
                           key={idx}
                           to={`/products?category=waterproofing&filter=${encodeURIComponent(item)}`}
+                          className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
+                        >
+                          {item}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Wood coating */}
+                  <div className="relative group/sub">
+                    <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
+                      Wood coating
+                      <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
+                    </div>
+                    <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
+                      {productCategories.woodCoating.map((item, idx) => (
+                        <Link
+                          key={idx}
+                          to={`/products?category=wood-coating&filter=${encodeURIComponent(item)}`}
+                          className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
+                        >
+                          {item}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Tools and Accessories */}
+                  <div className="relative group/sub">
+                    <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
+                      Tools and Accessories
+                      <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
+                    </div>
+                    <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
+                      {productCategories.toolsAccessories.map((item, idx) => (
+                        <Link
+                          key={idx}
+                          to={`/products?category=tools&filter=${encodeURIComponent(item)}`}
+                          className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
+                        >
+                          {item}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Other Products */}
+                  <div className="relative group/sub">
+                    <div className="px-3 py-2 text-sm font-semibold text-foreground flex items-center justify-between cursor-pointer hover:bg-accent rounded-sm transition-colors">
+                      Other Products
+                      <ChevronDown className="h-4 w-4 rotate-[-90deg] transition-transform duration-200" />
+                    </div>
+                    <div className="absolute left-full top-0 ml-1 w-64 bg-popover border border-border rounded-md shadow-lg p-2 transition-all duration-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible">
+                      {productCategories.otherProducts.map((item, idx) => (
+                        <Link
+                          key={idx}
+                          to={`/products?category=other&filter=${encodeURIComponent(item)}`}
                           className="block px-3 py-1.5 text-sm hover:bg-accent rounded-sm transition-colors"
                         >
                           {item}

@@ -203,14 +203,14 @@ const PaintCalculator = ({ pricePerLiter, coveragePerLiter }: PaintCalculatorPro
     const customerEmail = formData.email.trim() || "Not provided";
     const customerPhone = formData.phone.trim() || "Not provided";
     const customerMessage = formData.message.trim() || "Not provided";
-    
+
     doc.text(`Name: ${customerName}`, 20, yPosition);
     yPosition += 6;
     doc.text(`Email: ${customerEmail}`, 20, yPosition);
     yPosition += 6;
     doc.text(`Phone: ${customerPhone}`, 20, yPosition);
     yPosition += 6;
-    
+
     // Handle long messages with text wrapping
     const messageLines = doc.splitTextToSize(`Message: ${customerMessage}`, pageWidth - 40);
     doc.text(messageLines, 20, yPosition);
@@ -225,13 +225,13 @@ const PaintCalculator = ({ pricePerLiter, coveragePerLiter }: PaintCalculatorPro
 
     // Prepare table data
     const tableData: string[][] = [];
-    
+
     // Built-up Area
     tableData.push(["Built-up Area", `${builtUpArea} sq ft`]);
-    
+
     // Coverage Area
     tableData.push(["Coverage Area", `${coverageArea} sq ft`]);
-    
+
     // Coats information
     if (paintingType === "fresh") {
       tableData.push(["Putty Coats", `${puttyCoats} coat${puttyCoats! > 1 ? "s" : ""}`]);
@@ -241,10 +241,10 @@ const PaintCalculator = ({ pricePerLiter, coveragePerLiter }: PaintCalculatorPro
       tableData.push(["Primer Coats", `${primerCoats} coat${primerCoats! > 1 ? "s" : ""}`]);
       tableData.push(["Paint Coats", `${paintCoats} coat${paintCoats! > 1 ? "s" : ""} (Fixed)`]);
     }
-    
+
     // Paint Quality
     tableData.push(["Paint Quality", serviceType?.charAt(0).toUpperCase() + serviceType?.slice(1) || ""]);
-    
+
     // Rate per sq ft
     if (cost) {
       const minRate = rateRanges[paintingType!][serviceType!].min;
@@ -292,12 +292,12 @@ const PaintCalculator = ({ pricePerLiter, coveragePerLiter }: PaintCalculatorPro
     // Total Cost Table
     if (cost) {
       yPosition += 5;
-      
+
       // Format numbers without locale string to avoid encoding issues
       const formatNumber = (num: number) => {
         return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       };
-      
+
       const costTableData: string[][] = [
         ["Total Estimated Cost", `Rs ${formatNumber(cost.min)} - Rs ${formatNumber(cost.max)}`],
       ];
@@ -345,7 +345,7 @@ const PaintCalculator = ({ pricePerLiter, coveragePerLiter }: PaintCalculatorPro
     // Generate PDF blob or download
     const customerNameForFile = formData.name.trim() ? formData.name.replace(/\s+/g, "_") : "Quote";
     const fileName = `Painting_Quote_${customerNameForFile}_${Date.now()}.pdf`;
-    
+
     if (returnBlob) {
       // Use arraybuffer and convert to Blob for better compatibility with jsPDF v3
       const arrayBuffer = doc.output("arraybuffer");
@@ -488,12 +488,12 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
       try {
         // Generate PDF with empty form data (will show "Not provided" for customer details)
         const pdfBlob = generatePDF(true) as Blob;
-        
+
         // Validate blob
         if (!pdfBlob || pdfBlob.size === 0) {
           throw new Error("Failed to generate PDF. The PDF blob is empty or invalid.");
         }
-        
+
         // Download PDF for user - use form data if available
         const customerNameForFile = formData.name.trim() ? formData.name.replace(/\s+/g, "_") : "Quote";
         const fileName = `Painting_Quote_${customerNameForFile}_${Date.now()}.pdf`;
@@ -505,7 +505,7 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
         link.click();
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
-        
+
         // Show success message
         await Swal.fire({
           icon: "success",
@@ -548,15 +548,15 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
     e.preventDefault();
     if (validateForm()) {
       setIsSendingEmail(true);
-      
+
       try {
         // Close dialog first
         setIsDialogOpen(false);
-        
+
         // Proceed to step 4 (results)
         // Keep form data for PDF generation
         setStep(4);
-        
+
         // Clear form errors only
         setFormErrors({
           name: "",
@@ -636,7 +636,7 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
       {/* Colorful background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-blue-400/5 to-purple-400/5 pointer-events-none"></div>
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-blue-400 via-purple-400 to-pink-400"></div>
-      
+
       <CardHeader className="relative z-10">
         <CardTitle className="flex items-center animate-fade-in-up">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-blue-500 flex items-center justify-center mr-3 shadow-lg">
@@ -656,7 +656,7 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
             <span className="text-xs font-medium text-primary">{Math.round((step / 4) * 100)}%</span>
           </div>
           <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
-            <div 
+            <div
               className="h-full bg-gradient-to-r from-primary via-blue-500 to-purple-500 rounded-full transition-all duration-500 ease-out"
               style={{ width: `${(step / 4) * 100}%` }}
             ></div>
@@ -682,11 +682,10 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                 }
               }}
             >
-              <div className={`flex items-center space-x-3 p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group ${
-                paintingType === "fresh" 
-                  ? "border-primary bg-primary/10 shadow-lg scale-[1.02]" 
-                  : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-md"
-              }`}>
+              <div className={`flex items-center space-x-3 p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group ${paintingType === "fresh"
+                ? "border-primary bg-primary/10 shadow-lg scale-[1.02]"
+                : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-md"
+                }`}>
                 <RadioGroupItem value="fresh" id="fresh" className="group-hover:scale-110 transition-transform" />
                 <Label htmlFor="fresh" className="flex-1 cursor-pointer">
                   <div className="font-semibold text-lg group-hover:text-primary transition-colors">Fresh Painting</div>
@@ -698,11 +697,10 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                   <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
                 )}
               </div>
-              <div className={`flex items-center space-x-3 p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group ${
-                paintingType === "repaint" 
-                  ? "border-primary bg-primary/10 shadow-lg scale-[1.02]" 
-                  : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-md"
-              }`}>
+              <div className={`flex items-center space-x-3 p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group ${paintingType === "repaint"
+                ? "border-primary bg-primary/10 shadow-lg scale-[1.02]"
+                : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-md"
+                }`}>
                 <RadioGroupItem value="repaint" id="repaint" className="group-hover:scale-110 transition-transform" />
                 <Label htmlFor="repaint" className="flex-1 cursor-pointer">
                   <div className="font-semibold text-lg group-hover:text-primary transition-colors">Re-painting</div>
@@ -747,11 +745,13 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                 <span>200 sq ft</span>
                 <span>10,000 sq ft</span>
               </div>
+              {/* Coverage Area Hidden as per request
               <div className="mt-4 p-3 bg-primary/5 rounded-lg border border-primary/20">
                 <p className="text-sm font-medium">
                   Coverage Area: <span className="font-bold text-primary text-lg">{coverageArea.toLocaleString()} sq ft</span>
                 </p>
               </div>
+              */}
             </div>
 
             {paintingType === "fresh" && (
@@ -763,19 +763,10 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                     value={puttyCoats?.toString() || ""}
                     onValueChange={(value) => setPuttyCoats(parseInt(value))}
                   >
-                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${
-                      puttyCoats === 1 
-                        ? "border-primary bg-primary/10 shadow-md" 
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
-                    }`}>
-                      <RadioGroupItem value="1" id="putty-1" className="group-hover:scale-110 transition-transform" />
-                      <Label htmlFor="putty-1" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">1 Coat Putty</Label>
-                    </div>
-                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${
-                      puttyCoats === 2 
-                        ? "border-primary bg-primary/10 shadow-md" 
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
-                    }`}>
+                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${puttyCoats === 2
+                      ? "border-primary bg-primary/10 shadow-md"
+                      : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
+                      }`}>
                       <RadioGroupItem value="2" id="putty-2" className="group-hover:scale-110 transition-transform" />
                       <Label htmlFor="putty-2" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">2 Coat Putty</Label>
                     </div>
@@ -789,19 +780,10 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                     value={primerCoats?.toString() || ""}
                     onValueChange={(value) => setPrimerCoats(parseInt(value))}
                   >
-                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${
-                      primerCoats === 1 
-                        ? "border-primary bg-primary/10 shadow-md" 
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
-                    }`}>
-                      <RadioGroupItem value="1" id="primer-1" className="group-hover:scale-110 transition-transform" />
-                      <Label htmlFor="primer-1" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">1 Coat Primer</Label>
-                    </div>
-                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${
-                      primerCoats === 2 
-                        ? "border-primary bg-primary/10 shadow-md" 
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
-                    }`}>
+                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${primerCoats === 2
+                      ? "border-primary bg-primary/10 shadow-md"
+                      : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
+                      }`}>
                       <RadioGroupItem value="2" id="primer-2" className="group-hover:scale-110 transition-transform" />
                       <Label htmlFor="primer-2" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">2 Coat Primer</Label>
                     </div>
@@ -815,19 +797,17 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                     value={paintCoats?.toString() || ""}
                     onValueChange={(value) => setPaintCoats(parseInt(value))}
                   >
-                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${
-                      paintCoats === 1 
-                        ? "border-primary bg-primary/10 shadow-md" 
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
-                    }`}>
+                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${paintCoats === 1
+                      ? "border-primary bg-primary/10 shadow-md"
+                      : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
+                      }`}>
                       <RadioGroupItem value="1" id="paint-1" className="group-hover:scale-110 transition-transform" />
                       <Label htmlFor="paint-1" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">1 Coat Painting</Label>
                     </div>
-                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${
-                      paintCoats === 2 
-                        ? "border-primary bg-primary/10 shadow-md" 
-                        : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
-                    }`}>
+                    <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 group ${paintCoats === 2
+                      ? "border-primary bg-primary/10 shadow-md"
+                      : "border-border hover:border-primary/50 hover:bg-muted/50 hover:shadow-sm"
+                      }`}>
                       <RadioGroupItem value="2" id="paint-2" className="group-hover:scale-110 transition-transform" />
                       <Label htmlFor="paint-2" className="flex-1 cursor-pointer group-hover:text-primary transition-colors font-medium">2 Coat Painting</Label>
                     </div>
@@ -902,11 +882,10 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
             >
               <div className="space-y-4">
                 <div
-                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group relative overflow-hidden ${
-                    serviceType === "popular"
-                      ? "border-primary bg-gradient-to-br from-primary/10 to-blue-400/10 shadow-lg scale-[1.02]"
-                      : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
-                  }`}
+                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group relative overflow-hidden ${serviceType === "popular"
+                    ? "border-primary bg-gradient-to-br from-primary/10 to-blue-400/10 shadow-lg scale-[1.02]"
+                    : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
+                    }`}
                   onClick={() => setServiceType("popular")}
                 >
                   <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
@@ -922,11 +901,10 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                 </div>
 
                 <div
-                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group relative overflow-hidden ${
-                    serviceType === "premium"
-                      ? "border-primary bg-gradient-to-br from-blue-400/10 to-purple-400/10 shadow-lg scale-[1.02]"
-                      : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
-                  }`}
+                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group relative overflow-hidden ${serviceType === "premium"
+                    ? "border-primary bg-gradient-to-br from-blue-400/10 to-purple-400/10 shadow-lg scale-[1.02]"
+                    : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
+                    }`}
                   onClick={() => setServiceType("premium")}
                 >
                   <div className="absolute top-0 right-0 w-20 h-20 bg-blue-400/5 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
@@ -942,11 +920,10 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                 </div>
 
                 <div
-                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group relative overflow-hidden ${
-                    serviceType === "luxury"
-                      ? "border-primary bg-gradient-to-br from-purple-400/10 to-pink-400/10 shadow-lg scale-[1.02]"
-                      : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
-                  }`}
+                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all duration-300 group relative overflow-hidden ${serviceType === "luxury"
+                    ? "border-primary bg-gradient-to-br from-purple-400/10 to-pink-400/10 shadow-lg scale-[1.02]"
+                    : "border-border hover:border-primary/50 hover:shadow-md hover:scale-[1.01]"
+                    }`}
                   onClick={() => setServiceType("luxury")}
                 >
                   <div className="absolute top-0 right-0 w-20 h-20 bg-purple-400/5 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
@@ -1030,9 +1007,9 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
         {/* Navigation Buttons */}
         <div className="flex gap-3 pt-4 border-t border-border">
           {step > 1 && step < 4 && (
-            <Button 
-              variant="outline" 
-              onClick={handleBack} 
+            <Button
+              variant="outline"
+              onClick={handleBack}
               className="flex-1 hover:scale-105 transition-transform duration-300"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -1052,16 +1029,16 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
           )}
           {step === 4 && (
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button 
-                variant="outline" 
-                onClick={resetCalculator} 
+              <Button
+                variant="outline"
+                onClick={resetCalculator}
                 className="flex-1 hover:scale-105 transition-transform duration-300"
               >
                 Calculate Again
               </Button>
-              <Button 
+              <Button
                 type="button"
-                variant="hero" 
+                variant="hero"
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
@@ -1087,7 +1064,7 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
           {/* Colorful background gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-blue-400/5 to-purple-400/5 pointer-events-none rounded-lg"></div>
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-blue-400 via-purple-400 to-pink-400 rounded-t-lg"></div>
-          
+
           <DialogHeader className="relative z-10">
             <DialogTitle className="flex items-center">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-blue-500 flex items-center justify-center mr-3 shadow-lg">
@@ -1110,11 +1087,10 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                 placeholder="Enter your full name"
                 value={formData.name}
                 onChange={(e) => handleInputChange("name", e.target.value)}
-                className={`transition-all duration-300 ${
-                  formErrors.name 
-                    ? "border-destructive focus:border-destructive focus:ring-destructive" 
-                    : "focus:border-primary focus:ring-primary"
-                }`}
+                className={`transition-all duration-300 ${formErrors.name
+                  ? "border-destructive focus:border-destructive focus:ring-destructive"
+                  : "focus:border-primary focus:ring-primary"
+                  }`}
               />
               {formErrors.name && (
                 <p className="text-sm text-destructive animate-fade-in">{formErrors.name}</p>
@@ -1132,11 +1108,10 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                 placeholder="Enter your email address"
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
-                className={`transition-all duration-300 ${
-                  formErrors.email 
-                    ? "border-destructive focus:border-destructive focus:ring-destructive" 
-                    : "focus:border-primary focus:ring-primary"
-                }`}
+                className={`transition-all duration-300 ${formErrors.email
+                  ? "border-destructive focus:border-destructive focus:ring-destructive"
+                  : "focus:border-primary focus:ring-primary"
+                  }`}
               />
               {formErrors.email && (
                 <p className="text-sm text-destructive animate-fade-in">{formErrors.email}</p>
@@ -1154,11 +1129,10 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
                 placeholder="Enter your phone number"
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
-                className={`transition-all duration-300 ${
-                  formErrors.phone 
-                    ? "border-destructive focus:border-destructive focus:ring-destructive" 
-                    : "focus:border-primary focus:ring-primary"
-                }`}
+                className={`transition-all duration-300 ${formErrors.phone
+                  ? "border-destructive focus:border-destructive focus:ring-destructive"
+                  : "focus:border-primary focus:ring-primary"
+                  }`}
               />
               {formErrors.phone && (
                 <p className="text-sm text-destructive animate-fade-in">{formErrors.phone}</p>
@@ -1189,9 +1163,9 @@ ${cost ? `Rate per sq ft: Rs ${rateRanges[paintingType!][serviceType!].min} - Rs
               >
                 Cancel
               </Button>
-              <Button 
-                type="submit" 
-                variant="hero" 
+              <Button
+                type="submit"
+                variant="hero"
                 disabled={isSendingEmail}
                 className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 hover:from-primary/90 hover:via-blue-500/90 hover:to-purple-500/90 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
