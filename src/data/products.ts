@@ -47,23 +47,11 @@ const getProductImages = (slug: string, category: string): string[] => {
   // Map of product slugs to their nerolac.com image URLs
   // Extracted from actual img tags on nerolac.com
   const productImageMap: Record<string, string[]> = {
-    "neu-latex-interior-paint": [
-      "https://www.nerolac.com/sites/default/files/2025-09/Neu-Latex-Interior-Paint.png"
-    ],
-    "beauty-smooth-wow-white": [
-      "https://www.nerolac.com/sites/default/files/2025-06/Nerolac-Beauty-Smooth_WOW-WHITE_Cheat-shot_Layered-Master_Opt-1_R1_Low-Res.png"
-    ],
     "impressions-kashmir-high-sheen": [
       "https://www.nerolac.com/sites/default/files/2025-02/Nerolac-Impressions-Kashmir-High-Sheen_Cheatshot_R1.png"
     ],
     "impressions-hd": [
       "https://www.nerolac.com/sites/default/files/2022-11/Impressions%20HD_0.png"
-    ],
-    "impressions-kashmir": [
-      "https://www.nerolac.com/sites/default/files/2022-10/Impressions-Kashmir.png"
-    ],
-    "kashmir-matt": [
-      "https://www.nerolac.com/sites/default/files/2025-02/Nerolac-Impressions-Kashmir-Matt_Cheatshot_R1%20%281%29.png"
     ],
     "impressions-sheen": [
       "https://www.nerolac.com/sites/default/files/2024-12/205x258.png"
@@ -71,36 +59,36 @@ const getProductImages = (slug: string, category: string): string[] => {
     "beauty-gold-washable": [
       "https://www.nerolac.com/sites/default/files/2025-05/205-x-258.png"
     ],
+    "beauty-gold": [
+      "https://www.nerolac.com/sites/default/files/2022-10/Beauty-Gold.png"
+    ],
     "beauty-sheen": [
       "https://www.nerolac.com/sites/default/files/2022-10/Nerolac-Beauty-Sheen.png"
     ],
     "beauty-little-master-sheen": [
       "https://www.nerolac.com/sites/default/files/2023-12/2023-10-1502_Nerolac_BLMS-Website-Banners_Product-Packshot_%28H%29205x248%20%281%29.png"
     ],
-    "neu-latex-exterior": [
-      "https://www.nerolac.com/sites/default/files/2025-09/Neu-Latex-Exterior.png"
+    "little-master": [
+      "https://www.nerolac.com/sites/default/files/2022-10/Little-Master.png"
     ],
-    "suraksha-plus-wow-white": [
-      "https://www.nerolac.com/sites/default/files/2025-09/Suraksha%20Plus%20WOW%20White.png"
+    "beauty-little-master": [
+      "https://www.nerolac.com/sites/default/files/2022-10/Little-Master.png"
     ],
-    "excel-antipeel-wow-white": [
-      "https://www.nerolac.com/sites/default/files/2024-12/205-x-258.png"
+    "texture-paint": [
+      "https://www.nerolac.com/sites/default/files/2025-07/Texture%20-%2020kg%20Bucket.png"
     ],
-    "excel-everlast": [
-      "https://www.nerolac.com/sites/default/files/2025-11/Everlast_0.png"
-    ],
-    "excel-total": [
-      "https://www.nerolac.com/sites/default/files/2022-10/Excel-Total.png"
-    ],
-    "excel-sheen": [
-      "https://www.nerolac.com/sites/default/files/2025-09/Nerolac-Excel-Sheen_0.png"
-    ],
-    "excel-no-dust": [
-      "https://www.nerolac.com/sites/default/files/2025-09/Excel-No-Dust.png"
-    ],
-    "suraksha-sheen": [
-      "https://www.nerolac.com/themes/nerolac/img/healthy-home-paint.webp"
-    ],
+    // "neu-latex-interior-paint": [
+    //   "https://www.nerolac.com/sites/default/files/2025-09/Neu-Latex-Interior-Paint.png"
+    // ],
+    // "beauty-smooth-wow-white": [
+    //   "https://www.nerolac.com/sites/default/files/2025-06/Nerolac-Beauty-Smooth_WOW-WHITE_Cheat-shot_Layered-Master_Opt-1_R1_Low-Res.png"
+    // ],
+    // "impressions-kashmir": [
+    //   "https://www.nerolac.com/sites/default/files/2022-10/Impressions-Kashmir.png"
+    // ],
+    // "kashmir-matt": [
+    //   "https://www.nerolac.com/sites/default/files/2025-02/Nerolac-Impressions-Kashmir-Matt_Cheatshot_R1%20%281%29.png"
+    // ],
     "nerolac-wonderwood": [
       "https://www.nerolac.com/sites/default/files/2025-09/Nerolac-Wonderwood.png"
     ],
@@ -191,11 +179,26 @@ const getProductImages = (slug: string, category: string): string[] => {
     "kansai-select": [
       "https://www.nerolac.com/sites/default/files/2025-09/Kansai-Select.png"
     ],
-    "excel-texture-finish-dholpur": [
+    "excel-everlast-12": [
+      "https://www.nerolac.com/sites/default/files/2025-11/Everlast_0.png"
+    ],
+    "excel-total": [
+      "https://www.nerolac.com/sites/default/files/2022-10/Excel-Total.png"
+    ],
+    "excel-no-dust": [
+      "https://www.nerolac.com/sites/default/files/2025-09/Excel-No-Dust.png"
+    ],
+    "suraksha-sheen": [
+      "https://www.nerolac.com/sites/default/files/2022-10/Nerolac-Suraksha-sheen.png"
+    ],
+    "suraksha": [
+      "https://www.nerolac.com/sites/default/files/2022-10/Suraksha.png"
+    ],
+    "excel-mica-marble-stretch-sheen-nxt": [
       "https://www.nerolac.com/sites/default/files/2025-09/Neroalc-Excel-Mica-Marble-Strech-Sheen-%26-Mica-Marble_1.png"
     ],
-    "excel-texture-finish-rigor": [
-      "https://www.nerolac.com/sites/default/files/2022-10/Nerolac-Suraksha-sheen.png"
+    "mica-marble-stretch-sheen": [
+      "https://www.nerolac.com/sites/default/files/2025-09/Neroalc-Excel-Mica-Marble-Strech-Sheen-%26-Mica-Marble_1.png"
     ],
     "excel-texture-finish-roller": [
       "https://www.nerolac.com/sites/default/files/2025-07/Texture%20-%2020kg%20Bucket.png"
@@ -230,6 +233,7 @@ const getProductImages = (slug: string, category: string): string[] => {
     "nerolac-acrylic-wall-putty": [
       "https://www.nerolac.com/sites/default/files/styles/product_image/public/2025-01/Nerolac-Wall-Putty-205x258.png"
     ],
+
   };
 
   // Return mapped images or default placeholder
@@ -320,40 +324,40 @@ export const products: Product[] = [
   // ============================================
   // INTERIOR WALL PAINTS
   // ============================================
-  {
-    ...createProduct(
-      "1",
-      "neu-latex-interior-paint",
-      "Neu Latex Interior Paint",
-      "Interior Wall Paints",
-      "Premium",
-      "Economical Water Thinnable Interior Paint",
-      "Nerolac Neu Latex Interior Paint is an economical water thinnable paint specially designed for application on interior walls with good washability.",
-      850
-    ),
-    features: ["Superior Smoothness", "Good Flow & Levelling", "Good Washability", "Good Ease Of Application", "Higher Coverage", "Better Durability", "Water Thinnable", "Economical"],
-    specifications: {
-      coverage: "120-140 sq ft per liter per coat",
-      dryingTime: "2-4 hours (surface dry)",
-      recoatTime: "4-6 hours minimum",
-      finishType: "Smooth Finish",
-      dilution: "30-40% with clean water",
-      warranty: "5-10 years",
-    },
-  },
-  {
-    ...createProduct(
-      "2",
-      "beauty-smooth-wow-white",
-      "Beauty Smooth WOW White",
-      "Interior Wall Paints",
-      "Popular",
-      "Enhanced Whiteness with Smooth Finish",
-      "Nerolac Beauty Smooth WOW White is a specially developed Whitest White, economical interior emulsion for a distinctly rich and smooth finish. Its optimum performance with respect to decoration and protection, is through an ideal combination of pigments and extenders, dispersed in a copolymer emulsion.",
-      550
-    ),
-    features: ["Enhanced Whiteness", "Smooth Finish", "Bright Appearance", "Easy Application", "Excellent Coverage"],
-  },
+  // {
+  //   ...createProduct(
+  //     "1",
+  //     "neu-latex-interior-paint",
+  //     "Neu Latex Interior Paint",
+  //     "Interior Wall Paints",
+  //     "Premium",
+  //     "Economical Water Thinnable Interior Paint",
+  //     "Nerolac Neu Latex Interior Paint is an economical water thinnable paint specially designed for application on interior walls with good washability.",
+  //     850
+  //   ),
+  //   features: ["Superior Smoothness", "Good Flow & Levelling", "Good Washability", "Good Ease Of Application", "Higher Coverage", "Better Durability", "Water Thinnable", "Economical"],
+  //   specifications: {
+  //     coverage: "120-140 sq ft per liter per coat",
+  //     dryingTime: "2-4 hours (surface dry)",
+  //     recoatTime: "4-6 hours minimum",
+  //     finishType: "Smooth Finish",
+  //     dilution: "30-40% with clean water",
+  //     warranty: "5-10 years",
+  //   },
+  // },
+  // {
+  //   ...createProduct(
+  //     "2",
+  //     "beauty-smooth-wow-white",
+  //     "Beauty Smooth WOW White",
+  //     "Interior Wall Paints",
+  //     "Popular",
+  //     "Enhanced Whiteness with Smooth Finish",
+  //     "Nerolac Beauty Smooth WOW White is a specially developed Whitest White, economical interior emulsion for a distinctly rich and smooth finish. Its optimum performance with respect to decoration and protection, is through an ideal combination of pigments and extenders, dispersed in a copolymer emulsion.",
+  //     550
+  //   ),
+  //   features: ["Enhanced Whiteness", "Smooth Finish", "Bright Appearance", "Easy Application", "Excellent Coverage"],
+  // },
   {
     ...createProduct(
       "3",
@@ -362,7 +366,7 @@ export const products: Product[] = [
       "Interior Wall Paints",
       "Premium",
       "Luxurious High Sheen Finish",
-      "Nerolac Impressions Kashmir High Sheen offers a top-notch sheen and a smooth and luxurious finish to the walls. It is based on Silver Ion Technology that kills 99% of bacteria on the painted surface and makes the environment at home safe and healthy. The whiteness, opacity, washability, stain resistance, flow & levelling, ease of application, anti-viral performance, anti-fungal performance and anti-bacterial performance are outstanding, creating a high-class sheen finish that keeps the wall awe-inspiring for years.",
+      "Nerolac Impressions Kashmir High Sheen offers a top-notch sheen and a smooth and luxurious finish to the walls. It is based on Silver Ion Technology that kills 99% of bacteria on the painted surface and makes the environment at home safe and healthy.",
       1100
     ),
     features: ["No Smell", "Top-Notch Sheen", "Smooth & Luxurious Finish", "Silver Ion Technology", "Kills 99% Bacteria", "Anti-Viral Performance", "Anti-Fungal Performance", "Anti-Bacterial Performance", "Outstanding Washability", "Excellent Stain Resistance", "Superior Flow & Levelling", "Easy Application", "Long Lasting"],
@@ -388,32 +392,32 @@ export const products: Product[] = [
     ),
     features: ["HD Technology", "Stain Resistant", "Fade Resistant", "Smooth Finish", "Vibrant Colors", "Long Lasting", "Excellent Color Retention"],
   },
-  {
-    ...createProduct(
-      "5",
-      "impressions-kashmir",
-      "Impressions Kashmir",
-      "Interior Wall Paints",
-      "Premium",
-      "Superior Quality Acrylic Emulsion",
-      "Nerolac Impressions Kashmir Luxury Emulsion is a superior quality 100% acrylic emulsion based interior wall paint with germ killing formula.",
-      1000
-    ),
-    features: ["100% Acrylic", "Luxurious Finish", "Superior Quality", "Excellent Durability", "Superior Washability", "Stain Resistant", "Excellent Color Retention"],
-  },
-  {
-    ...createProduct(
-      "6",
-      "kashmir-matt",
-      "Kashmir Matt",
-      "Interior Wall Paints",
-      "Premium",
-      "Premium Matt Finish",
-      "Nerolac Impressions Kashmir Matt offers a top-class smooth matt finish that hides wall imperfections and gives a luxurious appeal to the walls. It is based on Silver Ion Technology that kills 99% of bacteria on the painted surface and ensures a safe and healthy environment at home. The whiteness, opacity, washability, stain resistance, flow and levelling, ease of application, anti-viral performance, anti-fungal performance and anti-bacterial performance are outstanding, creating an excellent smooth matt finish that keeps the wall awe-inspiring for years.",
-      950
-    ),
-    features: ["Top-Class Smooth Matt Finish", "Hides Wall Imperfections", "Silver Ion Technology", "Kills 99% Bacteria", "Anti-Viral Performance", "Anti-Fungal Performance", "Anti-Bacterial Performance", "Outstanding Washability", "Excellent Stain Resistance", "Superior Flow & Levelling", "Easy Application", "Long Lasting"],
-  },
+  // {
+  //   ...createProduct(
+  //     "5",
+  //     "impressions-kashmir",
+  //     "Impressions Kashmir",
+  //     "Interior Wall Paints",
+  //     "Premium",
+  //     "Superior Quality Acrylic Emulsion",
+  //     "Nerolac Impressions Kashmir Luxury Emulsion is a superior quality 100% acrylic emulsion based interior wall paint with germ killing formula.",
+  //     1000
+  //   ),
+  //   features: ["100% Acrylic", "Luxurious Finish", "Superior Quality", "Excellent Durability", "Superior Washability", "Stain Resistant", "Excellent Color Retention"],
+  // },
+  // {
+  //   ...createProduct(
+  //     "6",
+  //     "kashmir-matt",
+  //     "Kashmir Matt",
+  //     "Interior Wall Paints",
+  //     "Premium",
+  //     "Premium Matt Finish",
+  //     "Nerolac Impressions Kashmir Matt offers a top-class smooth matt finish that hides wall imperfections and gives a luxurious appeal to the walls. It is based on Silver Ion Technology that kills 99% of bacteria on the painted surface and ensures a safe and healthy environment at home.",
+  //     950
+  //   ),
+  //   features: ["Top-Class Smooth Matt Finish", "Hides Wall Imperfections", "Silver Ion Technology", "Kills 99% Bacteria", "Anti-Viral Performance", "Anti-Fungal Performance", "Anti-Bacterial Performance", "Outstanding Washability", "Excellent Stain Resistance", "Superior Flow & Levelling", "Easy Application", "Long Lasting"],
+  // },
   {
     ...createProduct(
       "7",
@@ -440,61 +444,178 @@ export const products: Product[] = [
     ),
     features: ["Washable", "Soft Sheen", "Stain Resistant", "Easy Maintenance", "Good Coverage", "High Traffic Areas"],
   },
+  {
+    ...createProduct(
+      "45",
+      "beauty-gold",
+      "Beauty Gold",
+      "Interior Wall Paints",
+      "Popular",
+      "Premium Acrylic Emulsion",
+      "Nerolac Beauty GOLD is a specially formulated emulsion paint based on a durable copolymer resin, high opacity, micronised pigments, and additives to give better, beautifying and stain resistance properties.",
+      600
+    ),
+    features: ["Smooth Matt Finish", "Excellent Flow", "Fungal Resistance", "Anti-Bacterial", "Durable", "Economical"],
+  },
+  {
+    ...createProduct(
+      "49",
+      "beauty-sheen",
+      "Beauty Sheen",
+      "Interior Wall Paints",
+      "Popular",
+      "Premium Sheen Finish",
+      "Nerolac Beauty Sheen is a value for money emulsion with excellent sheen ﬁnish, good coverage and durability.",
+      620
+    ),
+    features: ["Sheen Finish", "Value for Money", "Good Coverage", "Durable", "Bright Finish"],
+  },
+  {
+    ...createProduct(
+      "50",
+      "beauty-little-master-sheen",
+      "Beauty Little Master Sheen",
+      "Interior Wall Paints",
+      "Popular",
+      "Economy Sheen Emulsion",
+      "Nerolac Beauty Little Master Sheen is an Economy Interior Wall Emulsion with very good sheen, smoothness, coverage & durability.",
+      480
+    ),
+    features: ["Economy Sheen", "Smoothness", "Coverage", "Durable", "Excellent Whiteness"],
+  },
+  {
+    ...createProduct(
+      "46",
+      "little-master",
+      "Little Master",
+      "Interior Wall Paints",
+      "Popular",
+      "Economical Interior Emulsion",
+      "Nerolac Little Master is an economical interior acrylic emulsion paint designed to provide a smooth, pleasing matt finish. It offers better whiteness, opacity, and coverage compared to normal distemper.",
+      450
+    ),
+    features: ["Economical", "Smooth Matt Finish", "Good Coverage", "Better Whiteness", "Low VOC", "Washable"],
+  },
+  {
+    ...createProduct(
+      "47",
+      "beauty-little-master",
+      "Beauty Little Master",
+      "Interior Wall Paints",
+      "Popular",
+      "Smooth Finish Emulsion",
+      "Nerolac Beauty Little Master is an interior wall paint available in sheen and matt finishes, offering superior whitening, opacity, and coverage.",
+      500
+    ),
+    features: ["Smooth Finish", "Superior Whiteness", "High Opacity", "Washable", "Low VOC", "Durable"],
+  },
+  {
+    ...createProduct(
+      "48",
+      "texture-paint",
+      "Texture Paint",
+      "Interior Textures",
+      "Premium",
+      "Decorative Texture Designs",
+      "Nerolac Texture Paint offers a diverse range of texture designs to add depth, character, and style to interior walls. Transform plain surfaces into visually engaging focal points.",
+      1000
+    ),
+    features: ["Decorative Textures", "Unique Designs", "Depth & Character", "Customizable", "Premium Finish"],
+  },
 
   // ============================================
   // EXTERIOR WALL PAINTS
   // ============================================
   {
     ...createProduct(
-      "9",
-      "neu-latex-exterior",
-      "Neu Latex Exterior",
+      "51",
+      "excel-everlast-12",
+      "Excel Everlast 12",
       "Exterior Wall Paints",
       "Premium",
-      "Premium Exterior Emulsion Paint",
-      "Nerolac Neu Latex Exterior Paint is an economical water thinnable paint specially designed for exterior walls with ease of application for coverage.",
-      900
-    ),
-    features: ["Weather Resistant", "UV Protection", "Premium Quality", "Algae Resistant", "Dirt Resistant", "Long Lasting", "Superior Durability"],
-  },
-  {
-    ...createProduct(
-      "10",
-      "suraksha-plus-wow-white",
-      "Suraksha Plus WOW White",
-      "Exterior Wall Paints",
-      "Popular",
-      "Enhanced Whiteness with Protection",
-      "Suraksha Plus WOW White is an exterior emulsion paint specially formulated to provide enhanced whiteness with excellent protection against weather, dirt, and algae. The paint uses advanced whitening technology and protective additives to maintain bright, clean exterior walls while offering superior weather resistance and durability.",
-      600
-    ),
-    features: ["Enhanced Whiteness", "Weather Resistant", "Dirt Resistant", "Algae Resistant", "UV Protection", "Long Lasting"],
-  },
-  {
-    ...createProduct(
-      "11",
-      "excel-antipeel-wow-white",
-      "Excel Antipeel Wow White",
-      "Exterior Wall Paints",
-      "Premium",
-      "Anti-Peel Technology with Enhanced Whiteness",
-      "Excel Antipeel Wow White is an exterior emulsion paint formulated with advanced anti-peel technology to prevent peeling and ensure long-lasting exterior walls with enhanced whiteness. The paint provides excellent adhesion to various substrates and superior durability against weather conditions, dirt, and algae growth.",
-      800
-    ),
-    features: ["Anti-Peel Technology", "Enhanced Whiteness", "Excellent Adhesion", "Weather Resistant", "Algae Resistant", "Durable", "Long Lasting"],
-  },
-  {
-    ...createProduct(
-      "12",
-      "excel-everlast",
-      "Excel Everlast",
-      "Exterior Wall Paints",
-      "Premium",
-      "Long-Lasting Exterior Protection",
-      "Excel Everlast is a premium exterior emulsion paint designed to withstand harsh weather conditions, resist algae growth, and maintain vibrant colors for years. Formulated with advanced technology, it provides excellent protection against UV rays, dirt, and moisture, ensuring long-lasting beauty and performance for your exterior walls.",
+      "12-Year Performance Warranty",
+      "Nerolac Excel Everlast 12 is a high-performance exterior emulsion paint that offers a 12-year performance warranty. It provides excellent protection against algae and fungi and keeps the walls looking new for years.",
       850
     ),
-    features: ["Weather Resistant", "Algae Resistant", "Fade Resistant", "UV Protection", "Dirt Resistant", "Long Lasting", "Vibrant Colors"],
+    features: ["12 Year Warranty", "Anti-Algal", "Anti-Fungal", "Dirt Pick-up Resistance", "Excellent Sheen", "Heat Guard Technology"],
+  },
+  {
+    ...createProduct(
+      "52",
+      "excel-total",
+      "Excel Total",
+      "Exterior Wall Paints",
+      "Premium",
+      "All-in-One Exterior Protection",
+      "Nerolac Excel Total is a long-lasting, water-based premium exterior paint. It offers excellent dirt pick-up resistance, water repellency, and resistance to algae growth, ensuring comprehensive protection for your home's exterior.",
+      750
+    ),
+    features: ["Excellent Dirt Pick-up Resistance", "Water Repellent", "Anti-Algal", "Long Lasting", "Excellent Sheen", "UV Resistant"],
+  },
+  {
+    ...createProduct(
+      "53",
+      "excel-no-dust",
+      "Excel No Dust",
+      "Exterior Wall Paints",
+      "Premium",
+      "Dust Resistant Exterior Paint",
+      "Nerolac Excel No Dust is an acrylic emulsion paint formulated for exterior use. It features superior dust resistance, keeping your walls clean and fresh for a longer period.",
+      700
+    ),
+    features: ["Dust Resistant", "Soft Sheen", "6 Year Warranty", "Anti-Algal", "Low VOC", "Washable"],
+  },
+  {
+    ...createProduct(
+      "54",
+      "suraksha-sheen",
+      "Suraksha Sheen",
+      "Exterior Wall Paints",
+      "Popular",
+      "Superior Sheen & Durability",
+      "Nerolac Suraksha Sheen is a water-based exterior emulsion designed to impart a best-in-class sheen and luxurious appearance to exterior walls along with long-lasting performance.",
+      550
+    ),
+    features: ["2X Sheen", "High Durability", "Algae & Fungal Resistance", "Good Coverage", "Economical", "Bright Finish"],
+  },
+  {
+    ...createProduct(
+      "55",
+      "suraksha",
+      "Suraksha",
+      "Exterior Wall Paints",
+      "Popular",
+      "Economical Exterior Protection",
+      "Nerolac Suraksha is a quality acrylic exterior emulsion paint that provides good protection to the walls against algae and fungus.",
+      450
+    ),
+    features: ["Economical", "Good Coverage", "Anti-Algal", "Anti-Fungal", "Durable", "Ease of Application"],
+  },
+  {
+    ...createProduct(
+      "56",
+      "excel-mica-marble-stretch-sheen-nxt",
+      "Excel Mica Marble Stretch Sheen Nxt",
+      "Exterior Wall Paints",
+      "Premium",
+      "Stretchable Film Technology",
+      "Nerolac Excel Mica Marble Stretch Sheen Nxt is an extremely durable, high-performance exterior paint with unique stretchable film technology that covers hairline cracks.",
+      950
+    ),
+    features: ["Stretchable Film", "Crack Bridging", "Mica Marble Finish", "High Sheen", "6 Year Waterproofing Warranty", "Dirt Pick-up Resistance"],
+  },
+  {
+    ...createProduct(
+      "57",
+      "mica-marble-stretch-sheen",
+      "Mica Marble Stretch Sheen",
+      "Exterior Wall Paints",
+      "Premium",
+      "Premium Marble Finish",
+      "Nerolac Mica Marble Stretch Sheen offers a smooth, glossy finish with a luxurious sheen. It contains mica and marble flakes for a unique, rich appearance.",
+      900
+    ),
+    features: ["Unique Marble Finish", "High Gloss", "Durable", "Aesthetic Appeal", "Excellent Adhesion", "Weather Resistant"],
   },
 
   // ============================================
