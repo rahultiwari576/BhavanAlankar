@@ -153,10 +153,28 @@ const getProductImages = (slug: string, category: string): string[] => {
       "https://www.nerolac.com/sites/default/files/2022-10/Putty_filler_grey_knifing.png"
     ],
     "paint-roller": [
-      "https://www.nerolac.com/sites/default/files/2022-10/nerolac-alkali-primer.png"
+      "https://m.media-amazon.com/images/I/61ergedBOHL._AC_SL1500_.jpg"
     ],
-    "paint-thinner": [
-      "https://www.nerolac.com/sites/default/files/2022-10/nerolac-alkali-primer.png"
+    "paint-brush": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Paintbrush.jpg/800px-Paintbrush.jpg"
+    ],
+    "nerolac-paint-rollers": [
+      "https://m.media-amazon.com/images/I/61ergedBOHL._AC_SL1500_.jpg"
+    ],
+    "nerolac-nerofix-masking-tape": [
+      "https://m.media-amazon.com/images/I/71BUEb21tHL._SL1500_.jpg"
+    ],
+    "nerolac-sandpaper": [
+      "https://m.media-amazon.com/images/I/71u8H46mJXS._SL1500_.jpg"
+    ],
+    "nerolac-roll-paper": [
+      "https://m.media-amazon.com/images/I/71yR49M-oSL._SL1500_.jpg"
+    ],
+    "nerolac-dhalai-plastic": [
+      "https://m.media-amazon.com/images/I/71yR49M-oSL._SL1500_.jpg"
+    ],
+    "nerolac-paint-strainers": [
+      "https://images-na.ssl-images-amazon.com/images/I/712BbDQqM8L._AC_SL1500_.jpg"
     ],
     "gypsum-po": [
       "https://www.nerolac.com/sites/default/files/2022-10/nerolac-alkali-primer.png"
